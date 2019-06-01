@@ -6,7 +6,9 @@
 
 > 내 두뇌는 뛰어나지만 한편으로 멍청하다.<br/>[MyStudy 프로젝트](https://github.com/daesungRa/MyStudy) 는 내 두뇌의 부족한 부분을 보완하기 위한 반영구적 보조드라이브이다.<br/> - 2019년 1월 어느 날
 
-> [나의 공부 스케줄](https://github.com/daesungRa/MyStudy/blob/master/etc/myschedule.md) (최종수정일 : 190521, tue)
+> [[05] 공부 스케줄](https://github.com/daesungRa/MyStudy/blob/master/etc/myschedule_may.md) (최종수정일 : 190531, fri)
+
+> [[06] 공부 스케줄](https://github.com/daesungRa/MyStudy/blob/master/etc/myschedule_june.md) (최종수정일 : 190601, sat)
 
 > [파이썬의 자바보다 좋은 점 (feat. 그냥 차이점)](https://github.com/daesungRa/MyStudy/blob/master/etc/pythonBetterThanJava.md) (최종수정일 : 190521, tue)
 
