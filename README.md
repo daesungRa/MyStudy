@@ -6,9 +6,9 @@
 
 > 내 두뇌는 뛰어나지만 한편으로 멍청하다.<br/>[MyStudy 프로젝트](https://github.com/daesungRa/MyStudy) 는 내 두뇌의 부족한 부분을 보완하기 위한 반영구적 보조드라이브이다.<br/> - 2019년 1월 어느 날
 
-> [[05] 공부 스케줄](https://github.com/daesungRa/MyStudy/blob/master/etc/myschedule_may.md) (최종수정일 : 190531, fri)
-
 > [[06] 공부 스케줄](https://github.com/daesungRa/MyStudy/blob/master/etc/myschedule_june.md) (최종수정일 : 190601, sat)
+
+> [[05] 공부 스케줄](https://github.com/daesungRa/MyStudy/blob/master/etc/myschedule_may.md) (최종수정일 : 190531, fri)
 
 > [파이썬의 자바보다 좋은 점 (feat. 그냥 차이점)](https://github.com/daesungRa/MyStudy/blob/master/etc/pythonBetterThanJava.md) (최종수정일 : 190521, tue)
 
@@ -59,6 +59,11 @@
 - [Python 에서 class mehtod 와 static method](https://github.com/daesungRa/MyStudy/blob/master/Python/classmethodAndStaticmethod.md) (190508, wed)
 - [Python 에서 날짜와 시간 다루기](https://github.com/daesungRa/MyStudy/blob/master/Python/datetime.md) (190508, wed)
 - [Python 에서 JSON 데이터 다루기](https://github.com/daesungRa/MyStudy/blob/master/Python/jsoninpython.md) (190508, wed)
+- [Python Docstring 설명](https://github.com/daesungRa/MyStudy/blob/master/Python/docstring.md) (190602, sun)
+
+## Clean Code in Python (2019, 마리아노 아나야 지음, 김창수 옮김)
+
+- [[파이썬스러운 코드] 인덱스와 슬라이스](https://github.com/daesungRa/MyStudy/blob/master/CleanCodeInPython/indexingAndSlicing.md) (190602, sun)
 
 ## HTML CSS
 
