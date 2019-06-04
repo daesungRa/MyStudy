@@ -17,7 +17,7 @@
     * filename = secure_filename(file.filename)
 - **app.instance_path** : 프로젝트의 루트 경로를 반환한다. 그러나 확인해보니 말단에 'instance' 라는 문자열을 포함하고 있어서, 그것을 기준으로 split 함.
 - **os.path.join** 으로 적절한 경로를 조립한다.
-- **os.path.exists 로 조립된 경로의 파일이 이미 존재하는지 확인 후,
+- **os.path.exists** 로 조립된 경로의 파일이 이미 존재하는지 확인 후,
     * 존재하지 않으면 그대로 두고
     * 존재하면 **secrets.token_hex(16)** 으로 생성된 해시문자열을 더해 파일명을 변경한다.
 - 최종적으로 **file.save([최종경로])** 로 실제 경로에 지정한 파일명으로 저장한다.
