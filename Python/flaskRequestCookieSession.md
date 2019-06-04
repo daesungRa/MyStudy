@@ -111,6 +111,23 @@ def logout():
    session.pop('username', None)
    return redirect(url_for('index'))
 ```
+- session expire time 지정 (timeout)
+    * app config 변수 중 **PERMANENT_SESSION_LIFETIME** 에 **datetime.timedelta** 값을 세팅하고,
+    * **before_request** 함수 내에서 ```session.permanent = True``` 설정을 해주면 된다.
+```python
+from flask import Flask, session
+from datetime import timedelta
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'db41d52ddb10d0b0ae411715154cd845'
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30)
+
+@app.before_request
+def before_request():
+    session.permanent = True
+
+...
+```
 
 
 

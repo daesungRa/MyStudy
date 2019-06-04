@@ -53,6 +53,31 @@
 	* 그것을 위해 우선 db 에 다량의 데이터를 삽입하고 적절한 조회 쿼리를 작성하면,
 	* 기존의 로직을 응용해서 사용 가능할 것이다
 	* 추가적으로 자동완성 화면을 위한 최소한의 ui/ux 도 만들어야 한다
+- 과정
+	* mongodb countries 컬렉션에 createIndex({code: 1}) 명령으로 unique 인덱스 생성
+	* countries json 데이터 삽입(insert, 데이터는 구글링해서 가져옴)
+	* 전체 조회
+		- db.countries.find({}, {_id: false});
+	* name 에 'Republic' 을 포함하는 문서 조회
+		- db.countries.find({name: /.*Republic.*/}, {_id: false});
+		- 여기서 첫 번째 인자는 filter 를, 두 번째 인자는 projection 을 의미한다
+	* pymongo 에서의 조회
+		- pymongo 는 python 어플리케이션에서 mongodb 에 connect 하기 위한 모듈이다.
+		- 여기서의 명령문은 mongodb 에서의 그것과는 약간 다르다.
+		- 전체 조회
+			* db\[collection_name].find()
+		- name 에 'Republic' 을 포함하는 문서 조회
+			* filter 인자에 **{name: /.*Republic.*/}** 이런 형식의 dict 를 바로 넣는 것이 아니라,
+			* {'name': {'$regex': 'Republic'}} 이런 식으로 regex 필터를 사용해야 한다.
+			* regex 는 regular expression 으로, re 모듈을 이용해 컴파일한 결과를 바로 넣던가, '$regex' 키-값을 추가적으로 작성해 넣어줘야 한다
+	* ui/ux : 잘 만들어보자..
+		- 포커싱이 가능한 button 태그를 customizing 해서 (어떻게든 끼워맞춰서) 일반적인 autocomplete 처럼 동작하도록 만듦
+- 보수 사항
+	* 대소문자 구분 문제 >> 대소문자를 구분하므로 서로 다른 조회결과가 나온다
+	* ux 부족한 문제 >> 조회된 버튼에 최초 포커스 시 제대로 되지 않음 (한번 더 눌러야 포커싱됨)
+	* 서버 조회
+		- 이제 선택한 검색어에 대한 결과를 조회해서 보여줘야 한다
+		- 추가적인 구상이 필요한 부분!
 
 #### 사용자 게시글 교체
 
