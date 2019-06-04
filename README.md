@@ -157,6 +157,7 @@
 - [[Oracle vs MySql] 오라클과 MySql 비교](https://github.com/daesungRa/MyStudy/blob/master/DB/diffOracleMySql.md) (190326, tue)
 - [[**MongoDB**] MongoDB 설치 및 구동하기](https://github.com/daesungRa/MyStudy/blob/master/DB/startMongodb.md) (190516, thur)
 - [[**MongoDB**] MongoDB 01](https://github.com/daesungRa/MyStudy/blob/master/DB/mongodb01.md) (190502, thur)
+- [[**MongoDB**] find 수행 시 filter, projection 적용하기](https://github.com/daesungRa/MyStudy/blob/master/DB/mongodbFindFilter.md) (190604, tue)
 
 ## Git
 
