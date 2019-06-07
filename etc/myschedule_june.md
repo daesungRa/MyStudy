@@ -4,7 +4,22 @@
 
 # 스케줄
 
-<<<<<<< HEAD
+## 190607 (fri) - win7 pro language pack / flask-board timeline
+
+#### lang pack
+
+- 언어팩은 vistalizator 를 활용한다. 이것은 vista 와 win7 용 언어 변경 툴이다.
+
+#### flask-board timeline
+
+- 홈 화면에 실시간으로 반영되는 타임라인을 만들 것
+- 실시간 적용을 위해서는 web socket 을 써야 하나?
+
+#### 집 가서?
+
+- flask web socket 공부 후 적용
+- 파이썬 클린 코드 정리
+
 ## 190605 (wed) - win7_pro / flask-board
 
 #### 부팅..
