@@ -4,6 +4,7 @@
 
 # 스케줄
 
+<<<<<<< HEAD
 ## 190605 (wed) - win7_pro / flask-board
 
 #### 부팅..
@@ -26,6 +27,10 @@
 #### 타임라인 + 무한 스크롤링
 
 - ui 틀 잡아놓음!
+=======
+
+
+>>>>>>> def2c1dbfc5b58a3a217a02c3488a4b869ba6831
 
 ## 190604 (tue) - win7_pro_k / flask-board
 
