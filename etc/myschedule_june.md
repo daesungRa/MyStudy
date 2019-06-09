@@ -4,6 +4,10 @@
 
 # 스케줄
 
+## 190609 (sun) - python clean code
+
+- python clean code 정리
+
 ## 190607 (fri) - win7 pro language pack / flask-board timeline
 
 #### lang pack
