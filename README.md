@@ -40,6 +40,7 @@
 8. etc
     1. [기타 정보](#기타-정보)
     2. [스터디](#GroupStudy)
+    3. [회화](#Conversation)
 
 # 카테고리
 
@@ -193,6 +194,10 @@
 
 - [자바스크립트 주의할점](https://github.com/daesungRa/MyStudy/blob/master/LearnFromBugs/JS.md) (최초 190201, fri, 지속업뎃)
 - [EL, JSTL 주의할점](https://github.com/daesungRa/MyStudy/blob/master/LearnFromBugs/El_Jstl.md) (최초 190201, fri, 지속업뎃)
+
+## Conversation
+
+- ["Who are you" 와 "Who you are" 의 차이](https://github.com/daesungRa/MyStudy/blob/master/EnglishConversion/whoaretyouwhoyouare.md) (190610, mon)
 
 ## 기타 정보
 
