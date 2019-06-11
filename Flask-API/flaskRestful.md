@@ -10,16 +10,6 @@
 
 > 참조 : [heejeong Kwon blog](https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html)
 
-#### 분류
-
-- [REST](#REST)
-- [REST 의 구성요소](#Elements of REST)
-- [REST 의 특징](#Feature of REST)
-- [REST API 의 개념](#Concept of REST API)
-- [REST API 의 특징](#Feature of REST API)
-- [REST API 설계의 기본 규칙](#Basic principle of REST API Architecture)
-- [RESTful 의 개념](#Concept of RESTful)
-
 #### REST
 
 - Representational State Transfer
@@ -129,7 +119,7 @@
 > 참조 : [Flask-RESTful 공식 문서 번역](https://flask-restful.readthedocs.io/en/latest/)
 
 - **Flask-RESTful** 은 **REST APIs** 를 빠르게 building 하기 위한 지원을 추가한 **Flask** 의 확장 모듈이다.
-- 이것은 당신의 ORM/libraries 와 함께 동작하는 경향화된 개념이다.
+- 이것은 당신의 ORM/libraries 와 함께 동작하는 경량화된 개념이다.
 - Flask-RESTful 은 최소한의 setup 으로 최상의 결과를 낼 수 있도록 한다.
 - 만약 Flask 에 친숙하다면, Flask-RESTful 도 습득하기 쉬울 것이다.
 
@@ -161,8 +151,8 @@
     * ```Flask debugging mode``` 를 활성화하면 코드 리로딩과 더 나은 에러 메시지를 보여 준다.
     * 다만, 실제 운영 환경에서 디버그 모드는 절대 활성화되면 안 된다!
 - Resourceful Routing (리소스 기반 라우팅)
-    * Flask-RESTful 에 의해 제공되는 the main building block 은 resource(리소스, 자원) 이다.
-    * Resource 는 최상단 [Flask pluggable views](http://flask.pocoo.org/docs/views/) 에 built 되어 해당 리소스에 메서드를 정의하는 것만으로 다양한 HTTP 행위(메서드)에 쉽게 접근하도록 한다.
+    * Flask-RESTful 에 의해 제공되는 the main building block 은 Resource(리소스, 자원) 이다.
+    * Resource 는 최상단 [Flask pluggable views](http://flask.pocoo.org/docs/views/) 에 build 되어 해당 리소스에 메서드를 정의하는 것만으로 다양한 HTTP 행위(메서드)에 쉽게 접근하도록 한다.
     ```python
     from flask import Flask, request
     from flask_restful import Resource, Api
@@ -188,7 +178,7 @@
     * ```add_resource``` 부분에 추가한 리소스 정의에 따라 URI 에는 str 타입의 고유한 id 가 포함되어야 한다.
     * REST 원리에 따라 각 HTTP 메서드 동작에 맞는 메서드가 호출된다.
     * Flask-RESTful 은 view 메서드로부터 반환되는 여러 종류의 return 값을 이해한다.
-    * Flask 와 유사하게, iterable 하고 response 객체로 변환 가능한 모든 결과값을 Flask response object 에 담아 있는 그대로 반환할 수 있다.
+    * Flask 와 유사하게, iterable 하고 response 객체로 변환 가능한 모든 결과값을 Flask response object 에 담아서 있는 그대로 반환할 수 있다.
     * 또한, 다중 return 값을 활용해서 response code 와 response headers 를 세팅할 수 있다. 아래 코드를 보자.
     ```python
     class Todo1(Resource):
