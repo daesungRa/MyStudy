@@ -197,7 +197,7 @@
 
 ## Conversation
 
-- ["Who are you" 와 "Who you are" 의 차이](https://github.com/daesungRa/MyStudy/blob/master/EnglishConversion/whoaretyouwhoyouare.md) (190610, mon)
+- ["Who are you" 와 "Who you are" 의 차이](https://github.com/daesungRa/MyStudy/blob/master/EnglishConversation/whoaretyouwhoyouare.md) (190610, mon)
 
 ## 기타 정보
 
