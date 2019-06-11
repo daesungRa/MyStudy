@@ -116,7 +116,7 @@
 
 > 드디어 flask 다.. 후..
 
-> 참조 : [Flask-RESTful 공식 문서 번역](https://flask-restful.readthedocs.io/en/latest/)
+> 참조 : [Flask-RESTful 공식 문서](https://flask-restful.readthedocs.io/en/latest/) 번역
 
 - **Flask-RESTful** 은 **REST APIs** 를 빠르게 building 하기 위한 지원을 추가한 **Flask** 의 확장 모듈이다.
 - 이것은 당신의 ORM/libraries 와 함께 동작하는 경량화된 개념이다.

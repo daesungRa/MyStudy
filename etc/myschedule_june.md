@@ -4,6 +4,33 @@
 
 # 스케줄
 
+## 190611 (tue) - flask-board, flask-restful
+
+#### 타임라인 수정
+
+- 채팅식이 아니라 히스토리 식으로 구현할 것
+- 저장은 디비에
+
+#### user password encryption
+
+- flask-bcrypt 활용하여 패스워드 암호화 하기
+- 검증 로직 추가
+	* 패스워드 검증
+	* unique field 검증 (기존 디비에러 검증에서 바꾸기)
+
+#### flask-restful 나머지 정리
+
+- 참조문서를 통해 충분히 공부하며 정리하기
+
+#### 집가서
+
+- flask-restful 정리
+- python clean code 정리
+- 회화정리
+- 거상
+	* 흑룔소환 : 수정단장 or 여와장
+	* 신수부 발동? : 조합스킬 굉뇌 >> 가네샤 + 오행기, 고로 가네샤 만들기
+
 ## 190610 (mon) - flask-board
 
 #### timeline feature using websocket
