@@ -65,6 +65,7 @@
 ## Clean Code in Python (2019, 마리아노 아나야 지음, 김창수 옮김)
 
 - [[파이썬스러운 코드] 인덱스와 슬라이스](https://github.com/daesungRa/MyStudy/blob/master/CleanCodeInPython/indexingAndSlicing.md) (190602, sun)
+- [[파이썬스러운 코드] 컨텍스트 관리자](https://github.com/daesungRa/MyStudy/blob/master/CleanCodeInPython/contextManager.md) (190611, tue)
 
 ## HTML CSS
 
