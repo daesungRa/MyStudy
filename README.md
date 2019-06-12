@@ -26,10 +26,9 @@
     4. [Spring](#Spring)
     5. [Flask](#Flask)
 3. Databases
-    1. [DB](#DB)
-    2. Oracle
-    3. MySql
-    4. MongoDB
+    1. [RDBMS](#RDBMS)
+    2. [NoSQL](#NoSQL)
+    3. [ORM](#ORM)
 4. WAS (Web Application Server)
     1. Apache + Tomcat
 5. VCS (Versoin Control System)
@@ -146,22 +145,29 @@
 - [**[WTF-FileUpload]** FileField 로 받은 file 데이터 저장 이슈 ](https://github.com/daesungRa/MyStudy/blob/master/Flask-API/flask-wtf-filefield.md) (190527, mon)
 - [**[REST API]** REST API 와 Flask-Restful 공부하기 ](https://github.com/daesungRa/MyStudy/blob/master/Flask-API/flaskRestful.md) (190610, mon)
 
-## DB
+## RDBMS
 
-- [계층형 게시판 정리](https://github.com/daesungRa/MyStudy/blob/master/DB/hierarchical.md) (190131, thur)
-- [게시판을 위한 DB 계정 생성 및 테이블 생성](https://github.com/daesungRa/MyStudy/blob/master/DB/createUser.md) (190124, thur)
-- [자바와 DB 연동하기 in eclipse](https://github.com/daesungRa/MyStudy/blob/master/DB/Connect_with_JAVA%26DB_in_Eclipse.md) (181217, mon)
-- [연동된 DB 게시판 테이블에 쿼리문 실행하기](https://github.com/daesungRa/MyStudy/blob/master/DB/Execute_db_query_into_board_tables.md) (181218, Tues)
-- [시퀀스 문법](https://github.com/daesungRa/MyStudy/blob/master/DB/Sequence_syntax.md) (181226, wed)
-- [Statement & PreparedStatement](https://github.com/daesungRa/MyStudy/blob/master/DB/Statement&PreparedStatement.md) (190103, thur)
-- [DBCP](https://github.com/daesungRa/MyStudy/blob/master/DB/DBCP.md) (190104, fri)
-- [[MyBatis] 마이바티스 시작, 환경설정, 예제](https://github.com/daesungRa/MyStudy/blob/master/DB/mybatis01.md) (190225, mon)
-- [[MyBatis] 마이바티스 SqlSession 활용, 기본 쿼리](https://github.com/daesungRa/MyStudy/blob/master/DB/mybatis02.md) (190226, tue)
-- [[MyBatis] 마이바티스 동적 SQL](https://github.com/daesungRa/MyStudy/blob/master/DB/mybatis03.md) (190227, wed)
-- [[Oracle vs MySql] 오라클과 MySql 비교](https://github.com/daesungRa/MyStudy/blob/master/DB/diffOracleMySql.md) (190326, tue)
-- [[**MongoDB**] MongoDB 설치 및 구동하기](https://github.com/daesungRa/MyStudy/blob/master/DB/startMongodb.md) (190516, thur)
-- [[**MongoDB**] MongoDB 01](https://github.com/daesungRa/MyStudy/blob/master/DB/mongodb01.md) (190502, thur)
-- [[**MongoDB**] find 수행 시 filter, projection 적용하기](https://github.com/daesungRa/MyStudy/blob/master/DB/mongodbFindFilter.md) (190604, tue)
+- [계층형 게시판 정리](https://github.com/daesungRa/MyStudy/blob/master/RDBMS/hierarchical.md) (190131, thur)
+- [게시판을 위한 DB 계정 생성 및 테이블 생성](https://github.com/daesungRa/MyStudy/blob/master/RDBMS/createUser.md) (190124, thur)
+- [자바와 DB 연동하기 in eclipse](https://github.com/daesungRa/MyStudy/blob/master/RDBMS/Connect_with_JAVA%26DB_in_Eclipse.md) (181217, mon)
+- [연동된 DB 게시판 테이블에 쿼리문 실행하기](https://github.com/daesungRa/MyStudy/blob/master/RDBMS/Execute_db_query_into_board_tables.md) (181218, Tues)
+- [시퀀스 문법](https://github.com/daesungRa/MyStudy/blob/master/RDBMS/Sequence_syntax.md) (181226, wed)
+- [Statement & PreparedStatement](https://github.com/daesungRa/MyStudy/blob/master/RDBMS/Statement&PreparedStatement.md) (190103, thur)
+- [DBCP](https://github.com/daesungRa/MyStudy/blob/master/RDBMS/DBCP.md) (190104, fri)
+- [[Oracle vs MySql] 오라클과 MySql 비교](https://github.com/daesungRa/MyStudy/blob/master/RDBMS/diffOracleMySql.md) (190326, tue)
+
+## NoSQL
+
+- [[**MongoDB**] MongoDB 설치 및 구동하기](https://github.com/daesungRa/MyStudy/blob/master/NoSQL/startMongodb.md) (190516, thur)
+- [[**MongoDB**] MongoDB 01](https://github.com/daesungRa/MyStudy/blob/master/NoSQL/mongodb01.md) (190502, thur)
+- [[**MongoDB**] find 수행 시 filter, projection 적용하기](https://github.com/daesungRa/MyStudy/blob/master/NoSQL/mongodbFindFilter.md) (190604, tue)
+
+## ORM
+
+- [[MyBatis] 마이바티스 시작, 환경설정, 예제](https://github.com/daesungRa/MyStudy/blob/master/ORM/mybatis01.md) (190225, mon)
+- [[MyBatis] 마이바티스 SqlSession 활용, 기본 쿼리](https://github.com/daesungRa/MyStudy/blob/master/ORM/mybatis02.md) (190226, tue)
+- [[MyBatis] 마이바티스 동적 SQL](https://github.com/daesungRa/MyStudy/blob/master/ORM/mybatis03.md) (190227, wed)
+- [[SQLAlchemy] SQLAlchemy 기본 사용법 01](https://github.com/daesungRa/MyStudy/blob/master/ORM/sqlalchemy01.md) (190612, wed)
 
 ## Git
 
