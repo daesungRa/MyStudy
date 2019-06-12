@@ -4,6 +4,33 @@
 
 # 스케줄
 
+## 190612 (wed) - SQLAlchemy 공부
+
+#### flask-board
+
+- sign up 시 unique field 유효성 검증 > email, nickname
+	* 기존에는 그냥 db 에 때려박아서 unique 필드 중복 오류가 발생하면 임의로 처리했다
+	* 이러한 방식은 일단 뭐가 문제인지 명료하지 않고, 처리방법도 주먹구구 식이다.
+	* 새롭게 유효성 검증할 방법은, 각각의 필드를 조회하여 투입된 값과 직접 비교하는 것이다.
+	* 그러나 이것을 구현하려면 더 많은 함수와 로직이 필요하겠으나,
+	* WTForm 의 validation 기능을 활용하면 훨신 간결하게 코드를 추가할 수 있다.
+	* 컨셉은, 각 form 클래스에 원하는 field 에 대한 validate 메서드를 만드는 것이다.
+	* 이제 중복 데이터를 투입하면 적절한 에러 메시지가 표현된다.
+- 기존의 객체 모델인 dict 타입 element 를 class 기반의 구체적인 model 로 만들 것
+	* ex) element = {} 방식을 user = User() 방식으로 변경
+
+#### 공부
+
+- SQLAlchemy 공부하기!
+- uml 공부하기!
+- vue 혹은 react 탐사하기!
+- 새 프로젝트에 대한 정의
+
+#### 집가서
+
+- 이어서 공부
+- python clean code 공부
+
 ## 190611 (tue) - flask-board, flask-restful
 
 #### 타임라인 수정
