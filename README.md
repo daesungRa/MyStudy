@@ -167,7 +167,8 @@
 - [[MyBatis] 마이바티스 시작, 환경설정, 예제](https://github.com/daesungRa/MyStudy/blob/master/ORM/mybatis01.md) (190225, mon)
 - [[MyBatis] 마이바티스 SqlSession 활용, 기본 쿼리](https://github.com/daesungRa/MyStudy/blob/master/ORM/mybatis02.md) (190226, tue)
 - [[MyBatis] 마이바티스 동적 SQL](https://github.com/daesungRa/MyStudy/blob/master/ORM/mybatis03.md) (190227, wed)
-- [[SQLAlchemy] SQLAlchemy 기본 사용법 01](https://github.com/daesungRa/MyStudy/blob/master/ORM/sqlalchemy01.md) (190612, wed)
+- [[SQLAlchemy] SQLAlchemy 기본 사용법 - 설치 및 모델 구성](https://github.com/daesungRa/MyStudy/blob/master/ORM/sqlalchemy01.md) (190612, wed)
+- [[SQLAlchemy] SQLAlchemy 기본 사용법 - CRUD 쿼리 수행](https://github.com/daesungRa/MyStudy/blob/master/ORM/sqlalchemy02.md) (190613, thur)
 
 ## Git
 

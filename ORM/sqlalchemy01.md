@@ -8,7 +8,7 @@
 
 > Object Relational Mapping
 
-> SQLAlchemy 는 다양한 파이썬 프로젝트에서 관계형 DB 와 논리적으로 연동하여 편리하게 객체지향적 개념을 구현할 수 있는 모듈이다. 이로써 Database 와 웹앱 프로젝트가 따로 놀지 않고 한 몸처럼 운용될 수 있다!
+> SQLAlchemy 는 다양한 파이썬 프로젝트에서 관계형 DB 와 논리적으로 연동하여 편리하게 객체지향적 개념을 구현할 수 있도록 하는 모듈이다. 이로써 Database 와 웹앱 프로젝트가 따로 놀지 않고 한 몸처럼 운용될 수 있다!
 
 ## 간단정리
 
@@ -56,7 +56,7 @@ class User(db.Model):
         self.created = datetime.utcnow()
     
     def __repr__(self):
-        return ''
+        return f'User("{self.email}", "{self.username}", "{self.nickname}", "{self.profile}")'
     
     def as_dict(self):
         return {x.name: getattr(self, x.name) for x in self.__table__.columns}
@@ -95,7 +95,6 @@ def create_app():
 - import 한 models 로부터 db 객체를 얻어와 현재 flask application (== app) 을 기반으로 ```init_app(app)``` 한다.
 - ```create_all()``` 함수는 데이터베이스 내에 명시한 테이블이 존재하지 않으면 모두 생성한다. (CREATE TABLE)
 - 그러나 여기서 문제점은 ```init_app(app)``` 과 ```create_all()``` 이 함께 있으면 후자에서 에러가 발생한다는 것인데,
-
     ```text
     create_all() : No application found. Either work inside a view function or push an application context.
     ```
@@ -122,7 +121,7 @@ if __name__ == '__main__':
 ```
 
 - 여기서 주목할 점은 with 구문 내부이다.
-- 앞서 설명했듯이, SQLAlchemy 기반 db 관련 작업은 근본없는 장소가 아닌 application 이 구동중이 장소 내부여야 한다고 했다.
+- 앞서 설명했듯이, SQLAlchemy 기반 db 관련 작업은 근본없는 장소가 아닌 application 이 구동중인 장소 내부여야 한다고 했다.
 - create_all() 은 연결된 db 에 자신에게 정의된 테이블이 이미 있으면 사용하고 없으면 새로 생성하는 작업을 수행하므로,
 - **application context** 를 with 구문을 통해 열고 해당 로직을 수행했다.
     * mariadb 에 접속된 heidisql 에서 이 작업이 수행 된 후 리로드를 해보면, 여러 컬럼 속성 및 제약조건과 함께 users 테이블이 생성된 것을 확인할 수 있다.
