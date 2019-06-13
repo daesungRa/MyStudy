@@ -64,8 +64,8 @@ db.session.commit()
 |id|username|email|
 |:---|:---|:---|
 |1|admin|admin@example.com|
-|1|peter|peter@example.org|
-|1|guest|guest@example.com|
+|2|peter|peter@example.org|
+|3|guest|guest@example.com|
 
 #### username 을 활용한 user 검색:
 ```python
