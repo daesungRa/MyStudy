@@ -59,12 +59,82 @@ db.session.commit()
 - 이것을 사용하면, 당신은 모든 레코드에 대한 **새로운 query 객체**를 얻게 된다.
 - 그러면 **filter()** 와 같은 메서드를 사용할 수 있게 되는데, 이것은 **all()** 혹은 **first()** 에 의해 select 가 수행되기 이전에 레코드를 필터링 해준다.
 - 만약 primary key 를 활용하고 싶다면, **get()** 메서드를 사용하면 된다.
-- 다음의 쿼리들은 데이터베이스로부터 아래 항목들을 가져온다.
-|id         |username       |email          |
-|:----------|:--------------|:--------------|
-|1          |admin          |admin@aa.com   |
-|1          |peter          |peter@bb.com   |
-|1          |guest          |guest@cc.com   |
+- 다음의 쿼리들은 데이터베이스로부터 아래 table 의 항목들을 가져온다.
 
+|id|username|email|
+|:---|:---|:---|
+|1|admin|admin@example.com|
+|1|peter|peter@example.org|
+|1|guest|guest@example.com|
+
+#### username 을 활용한 user 검색:
+```python
+peter = User.query.filter_by(username='peter').first()
+print(peter.id)
+print(peter.email)
+```
+result:
+```text
+2
+u'peter@example.org'
+```
+
+- filter 내 입력정보에 맞는 데이터가 없다면 None 이 반환된다.
+
+#### 조금 더 어려운 표현을 통한 그룹 검색:
+```python
+listData = User.query.filter(User.email.endswith('@example.com')).all()
+print(str(listData))
+```
+result:
+```text
+[<User u'admin'>, <User u'guest'>]
+```
+
+#### username 기반의 order by:
+```python
+sortData = User.query.order_by(User.username).all()
+print(str(sortData))
+```
+result:
+```text
+[<User u'admin'>, <User u'guest'>, <User u'peter'>]
+```
+
+#### Limiting users:
+```python
+limitData = User.query.limit(1).all()
+print(str(limitData))
+```
+result:
+```text
+[<User u'admin'>]
+```
+
+#### primary key 를 활용한 user 검색:
+```python
+pkData = User.query.get(1)
+print(pkData)
+```
+result:
+```text
+<User u'admin'>
+```
+
+## View 함수에서의 Queries
+
+- 만약 Flask view 함수를 작성한다면 missing entries 에 대한 404 에러를 반환하기가 매우 편리해진다.
+- 왜냐하면, 이것은 매우 일반적인 관용표현인데, Flask-SQLAlchemy 는 정확히 이것과 같은 목적을 위한 **a helper** 를 제공하기 때문이다.
+- **get()** 메서드 대신에 **get_or_404()** 를, **first()** 메서드 대신에 **first_or_404()** 메서드를 사용하면 view 함수는 None 을 반환하는 대신에 404 에러를 발생시킨다.
+```python
+@app.route('/user/<username>', methods=['GET'])
+def show_user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    return render_template('show_user.html', user=user)
+```
+- 또한 **abort()** 와 함께 어떤 설명을 추가하고 싶다면, 다음과 같이 **description** 을 인자로 사용할 수 있다.
+```python
+User.query.filter_by(username=username).first_or_404(description='There is no data with {}'.format(username))
+```
 
 
