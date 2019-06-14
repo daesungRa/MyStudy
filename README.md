@@ -137,6 +137,7 @@
 - [**[FLASK-RequestObject]** Request 객체와 Cookie, Session 다루기](https://github.com/daesungRa/MyStudy/blob/master/Python/flaskRequestCookieSession.md) (190523, thur)
 - [**[FLASK-MessageFlashing]** Message Flashing 정리](https://github.com/daesungRa/MyStudy/blob/master/Python/flask-message-flashing.md) (190529, wed)
 - [**[FLASK-Blueprint]** Flask Blueprint 란?](https://github.com/daesungRa/MyStudy/blob/master/Python/flaskBlueprint.md) (190527, mon)
+- [**[FLASK]** Pluggable View 정리](https://github.com/daesungRa/MyStudy/blob/master/Python/pluggableView.md) (190614, fri)
 
 ## Flask-API
 

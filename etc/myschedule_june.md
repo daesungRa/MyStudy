@@ -4,6 +4,79 @@
 
 # 스케줄
 
+## 190614 (fri) - flask-board Refactoring
+
+#### flask-board Refactoring
+
+- Refactoring?
+    - 외부에서 보여지는 동작의 변화 없이 소프트웨어 구조를 바꾸는 일련의 작업.
+    - 목표는 모든 사람이 이해하기 편리한 프로젝트 구조와 코드를 만드는 것이다.
+    - 컴퓨터적 성능 면에서 다소 비효율적으로 변화할 수 있으나, 협업 및 유지보수, 기능 개선 등의 측면에서 강점을 가질 수 있다.
+    - 한 번에 모든 구조를 완벽하게 구상할 수 없다는 전제 하에, 기존의 코드에 기반해서 점진적으로 더 좋은 디자인으로 개선해 나간다.
+    - 그러나 전체적인 디자인이나 구조는 충분히 생각한 다음에 진행한다.
+    - 클래스나 메서드를 관련 있는 논리적 기능에 따라 캡슐화하고, 변화의 폭이 적은 방향으로 작성한다.
+    - 세 번 이상 반복되는 코드는 함수화 한다. (두려워하지 말 것)
+    - 리펙토링을 하는 이유
+        * 시간이 흐름에 따라 잘못된 구조로 인한 기술적 부채가 늘어난다.
+        * 일관성 및 지속 가능한 소프트웨어를 작성할 수 있다.
+        * 개발방법론이 안정화되면 협업에 의한 개발 속도가 향상된다.
+        * 중복을 제거하고 응집도가 높고 결합도가 낮은 모듈화를 진행한다
+        * 버그를 빠르게 찾아내고 원인을 분석할 수 있다.
+    - 리펙토링을 하지 말아야 할 시점
+        * 기존 코드의 동작 자체에 문제가 있을 경우
+        * 마감 등 시간적 여유가 충분하지 않은 경우
+        * 리펙토링이 원만하게 이루어진다면 장기적으로 개발 및 유지보수 시간을 단축할 수 있다.
+- 기능별 API 분리
+    1. main application
+        * run module (ok)
+        * application configuration (ok)
+            - secret key
+            - database config
+            - session config
+            - debug mode
+        * static files / templates (bootstrap, summernote, jquery, socketio / base, home, ...)
+        * routing - view function
+        * services
+        * wtform
+        * file upload (?)
+    2. mariadb-sqlalchemy-pymysql
+        * users management
+        * db.session 및 model 작성
+        * password encryption
+    3. mongodb-pymongo
+        * field validation
+        * board
+        * comments
+        * pagination
+        * timeline
+
+#### 핸드폰 기능 정리
+
+- 기본
+	* 카톡, 카카오맵, 멜론, 네이버, 유투브, 트위치, 배민, chrome, ami mail, gmail
+	* github, google drive
+- 저장된 데이터
+	* 주소록, 메세지, 사진, 녹음, 메모, 캘린더, 파일 관리자
+- 금융
+	* 국민은행메인(스타뱅킹, 앱카드), 신한국비통장, 기업은행대출통장, 토스
+- 구인구직
+	* 잡코리아, 사람인, 잡플래닛, 원티드, 워크넷, 크레딧잡, indeed
+- 멤버십
+	* t membership
+	* 이디야, 할리스
+- 기타
+	* 고속 / 시외 버스 앱, 코레일톡
+	* 일터qna, okky, 파워 프리토킹(다음카페), scan news, translate, 성경
+	* 파거(네이버카페), otp, 포켓거상
+
+#### 주말간 할거
+
+- pluggable View 제대로 정리
+    * 참조문서를 통해 도입 배경, 사용 목적, 구조 및 구현방법, 예제 순으로 정리할 것
+- flask-board Refactoring 고민하기, 구현하기
+- 안경잡이개발자의 [flask 로 word cloud API](https://ndb796.tistory.com/241?category=1032205) 구현하기 따라해볼 것 (react 연동까지)
+- 새로운 프로젝트를 위한 구상. 이를 위한 SW 분석설계 방법론이나 UML 표현방법, 스토리보드 만들기(카카오 오븐) 등을 공부할 것.
+
 ## 190613 (thur) - SQLAlchemy 이어서
 
 - 원래 추가적으로 UML, 프론트 프레임워크 탐사, 새 프로젝트 정의 등을 할라했으나..

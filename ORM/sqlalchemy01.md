@@ -127,7 +127,7 @@ if __name__ == '__main__':
     * mariadb 에 접속된 heidisql 에서 이 작업이 수행 된 후 리로드를 해보면, 여러 컬럼 속성 및 제약조건과 함께 users 테이블이 생성된 것을 확인할 수 있다.
 - 이후 context manager 에 의해 컨텍스트가 닫히고, 최종적으로 app 이 구동된다.
 
-#### SQLAlchemy 를 활용한 CRUD 는 다음 게시글에서 설명한다.
+#### SQLAlchemy 를 활용한 CRUD 는 다음 게시글에서 설명한다. > [SQLAlchemy 기본 사용법 02 - CRUD 쿼리 수행](https://github.com/daesungRa/MyStudy/blob/master/ORM/sqlalchemy02.md)
 
 
 
