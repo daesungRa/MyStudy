@@ -1,6 +1,6 @@
 
 ![author](https://img.shields.io/badge/author-daesungRa-lightgray.svg?style=flat-square)
-![date](https://img.shields.io/badge/date-190614-lightgray.svg?style=flat-square)
+![date](https://img.shields.io/badge/date-190617-lightgray.svg?style=flat-square)
 
 # [FLASK] Pluggable View 정리
 
@@ -12,12 +12,12 @@
 ## Concept of Pluggable View
 
 - 축적되는 라우팅 정보를 기준에 따라 분리해 별도의 클래스로 관리한다.
-- main app 에서는 각 클래스에 대한 url 만을 등록한다.
-- 해당 클래스 자체는 view function 으로 변환되어 호출된다.
+- main app 에서는 각 클래스에 대한 url 을 각 클래스 기반으로 등록하고, HTTP methods 나 parameter 등 필요한 정보를 간략히 전달한다.
+- 등록된 클래스 자체는 view function 으로 변환되어 호출된다.
 
 ## [번역] Flask 공식 문서 [Pluggable Views](http://flask.pocoo.org/docs/1.0/views/)
 
-- Flask 0.7 은 function 대신 class 기반으로 구성된 Django 의 **the generic views** 로부터 영감을 받은 **pluggable views** 를 소개하고 있다.
+- Flask 0.7 은 function 대신 class 기반으로 구성된 **Django 의 the generic views** 로부터 영감을 받은 **pluggable views** 를 소개하고 있다.
 - 이것의 메인 컨셉은, ```you can replace parts of the implementations``` 와 ```customizable pluggable views``` 를 제공함에 있다.
 
 #### Basic Principle
@@ -37,7 +37,7 @@ def show_users(page):
 from flask.views import View
 
 class ShowUsers(View):
-    def dispatch_request(selfself):
+    def dispatch_request(self):
         users = User.query.all()
         return render_template('users.html', objects=users)
 
@@ -46,6 +46,10 @@ app.add_url_rule('/users/', view_func=ShowUsers.as_view('show_users'))
 - 보다시피 할 일은 **flask.views.View** 의 subclass 를 만들고 **dispatch_request()** 를 구현하는 것이다.
 - 그리고 **as_view()** 클래스 메서드를 활용해 이 class 를 **actual view function** 으로 변환해야 한다.
 - 이 함수로 넘기는 문자열은 해당 view 가 갖게 될 ```the name of the 'endpoint'``` 이다.
+    ```text
+    보통 일반적인 view function 에서는 매핑된 함수의 이름이 곧 endpoint 이다.
+  reverse_lookup 시에 이 endpoint 를 활용한다.
+    ```
 - 그럼 코드를 약간 refactor 해보자.
 ```python
 from flask.views import View
@@ -70,8 +74,8 @@ class UserView(ListView):
 ```
 - 이것은 이같이 작은 규모의 예제에서는 그다지 도움이 되지 않을 수도 있지만, 기본 원리를 설명하는 데는 충분히 좋다.
 - 당신이 class-based view 를 가지고 있을 때 ```self``` 가 가리키는 바가 무엇인지 궁금할 수 있다. (When you have a class-based view the question comes up what self points to.)
-- 이것이 동작하는 방식은, 클래스의 새로운 인스턴스로부터 the request 가 전해지는 시점이라면 언제든지 URL 로부터 온 파라미터와 함께 **dispatch_request()** 메서드가 호출되게 된다.
-- 클래스 자신은 **as_view()** 함수로 넘어온 파라미터와 함께 인스턴스화 된다.
+- 이것이 동작하는 방식은, 클래스 기반으로 새롭게 만들어진 인스턴스로부터 the request 가 전해지는 시점이라면 언제든지 URL 로부터 온 파라미터와 함께 **dispatch_request()** 메서드가 호출되는 과정을 포함한다.
+- 클래스 자신은 **as_view()** 함수로 넘어온 파라미터 (name of endpoint, template name 등) 와 함께 인스턴스화 된다.
 - 예를 들어 다음과 같이 클래스를 작성할 수 있다.
 ```python
 class RenderTemplateView(View):
