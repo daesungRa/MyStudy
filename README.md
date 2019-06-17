@@ -209,6 +209,7 @@
 ## Conversation
 
 - ["Who are you" 와 "Who you are" 의 차이](https://github.com/daesungRa/MyStudy/blob/master/EnglishConversation/whoaretyouwhoyouare.md) (190610, mon)
+- [Introduce Myself in English](https://github.com/daesungRa/MyStudy/blob/master/EnglishConversation/introduceMyself.md) (190615, sat)
 
 ## 기타 정보
 
