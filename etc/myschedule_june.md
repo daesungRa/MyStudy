@@ -4,6 +4,12 @@
 
 # 스케줄
 
+## 190617 (mon) - flask-board Refactoring
+
+- pluggable view 를 활용한 뷰 함수를 생성할 때,
+- before_request 의 내용은 어떻게 포함시킬까?
+    * 각 클래스 인스턴스가 생성될 때 생성자에서 만들도록 하면 될듯?
+
 ## 190614 (fri) - flask-board Refactoring
 
 #### flask-board Refactoring

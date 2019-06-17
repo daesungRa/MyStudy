@@ -199,7 +199,7 @@ app.add_url_rule('/users/', defaults={'user_id': None}, view_func=user_view, met
 app.add_url_rule('/users/', view_func=user_view, methods=['POST',])
 app.add_url_rule('/users/<int:user_id>', view_func=user_view, methods=['GET', 'PUT', 'DELETE'])
 ```
-- 만약 비슷한 형태의 많은 API 가 있다면 다음 '등록 코드' 와 같이 수정할 수 있다.
+- 만약 비슷한 형태의 많은 API 가 있다면 다음 'register code' 와 같이 수정할 수 있다.
 ```python
 def register_api(view, endpoint, url, pk='id', pk_type='int'):
     view_func = view.as_view(endpoint)
