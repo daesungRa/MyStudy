@@ -67,7 +67,7 @@
 
 - [[파이썬스러운 코드] 인덱스와 슬라이스](https://github.com/daesungRa/MyStudy/blob/master/CleanCodeInPython/indexingAndSlicing.md) (190602, sun)
 - [[파이썬스러운 코드] 컨텍스트 관리자 01](https://github.com/daesungRa/MyStudy/blob/master/CleanCodeInPython/contextManager01.md) (190611, tue)
-- [[파이썬스러운 코드] 컨텍스트 관리자 02](https://github.com/daesungRa/MyStudy/blob/master/CleanCodeInPython/contextManager02.md) (190611, tue)
+- [[파이썬스러운 코드] 컨텍스트 관리자 02](https://github.com/daesungRa/MyStudy/blob/master/CleanCodeInPython/contextManager02.md) (190621, fri)
 
 ## HTML CSS
 
