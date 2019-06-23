@@ -176,7 +176,7 @@
 
 - [Reset, Checkout 명령어](https://github.com/daesungRa/MyStudy/blob/master/GitStudy/CompareResetCheckout.md) (181231, mon)
 - [git 내부 캐시정보 삭제하기](https://github.com/daesungRa/MyStudy/blob/master/GitStudy/deletecaches.md) (190503, fri)
-- [git 으로 하는 협업 과정 간단정리](https://github.com/daesungRa/MyStudy/blob/master/GitStudy/gitCooperationProcess.md) (190521, tue)
+- [Cooperation Process using Git, Github](https://github.com/daesungRa/MyStudy/blob/master/GitStudy/gitCooperationProcess.md) (190623, sun)
 
 ## Operating System
 
