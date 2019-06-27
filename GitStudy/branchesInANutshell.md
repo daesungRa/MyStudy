@@ -24,10 +24,12 @@
 - 최초 커밋은 zero parents, 일반 커밋은 one parent, 둘 또는 그 이상의 브랜치들의 merge 로부터 말미암는 커밋에 대해서는 multiple parents.
 - 이것을 나타내기 위해서, 세 개의 파일을 포함하는 디렉토리가 있고, 그것들을 모두 stage 하고 commit 했다고 가정하자.
 - Staging the files 는 각각의 file 들에 대한 a checksum 을 계산하고(SHA-1), 해당 파일의 버전을 Git repository 에 저장하고(Git 는 그것들을 blob 형식으로 보낸다), 그 checksum 을 staging area 로 adds 한다.
+
 ```bash
 $ git add README test.rb LICENSE
 $ git commit -m 'The initial commit of my project'
 ```
+
 - 당신이 ```git commit``` 을 실행함으로써 commit 을 생성할 때, Git 은 각 subdirectory 를 checksums 하고(여기서는 그냥 프로젝트 root dir), 그것을 Git repository 의 트리 객체로써 저장한다.
 - 이때 Git 은 metadata 와 the root project tree 에 대한 포인터를 가진 commit 객체를 생성한다. 이는 필요에 따라 해당 snapshot 을 재생성하도록 하기 위함이다.
 - 이제 당신의 Git repository 는 다섯 개의 객체를 갖는다.
