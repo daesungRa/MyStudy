@@ -179,6 +179,7 @@
 - [git 내부 캐시정보 삭제하기](./GitStudy/deletecaches.md) (190503, fri)
 - [Cooperation Process using Git, Github](./GitStudy/gitCooperationProcess.md) (190623, sun)
 - [[GIT-SCM] Branch 간단설명](./GitStudy/branchesInANutshell.md) (190624, mon)
+- [[GIT-SCM] Basic Branching and Merging](GitStudy/basicBranchingMerging.md) (190702, tue)
 
 ## Operating System
 
