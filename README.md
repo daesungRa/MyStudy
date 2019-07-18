@@ -69,6 +69,7 @@
 - [[파이썬스러운 코드] 컨텍스트 관리자 01](./CleanCodeInPython/contextManager01.md) (190611, tue)
 - [[파이썬스러운 코드] 컨텍스트 관리자 02](./CleanCodeInPython/contextManager02.md) (190621, fri)
 - [[파이썬스러운 코드] 프로퍼티, 속성과 객체 메서드의 다른 타입들](./CleanCodeInPython/propertyAttribute.md) (190630, sun)
+- [[파이썬스러운 코드] 이터러블 객체](./CleanCodeInPython/iterable.md) (190718, thur)
 
 ## HTML CSS
 
