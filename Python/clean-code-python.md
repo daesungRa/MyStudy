@@ -311,6 +311,130 @@ create_menu(
 
 #### Functions should do one thing (함수는 하나의 작업만 해야 한다)
 
+이것은 소프트웨어 공학에서 가장 중요한 규칙이다. 함수들이 하나 이상의 작업을 한다면, 그것들은 조립하거나, 테스트하거나, 추론하기 어려워진다.
+함수를 단지 하나의 동작으로 독립시킬 수 있다면, 그것들은 리페토링이 쉬워지고 당신의 코드는 읽기 더 깔끔해질 것이다.
+이 규칙을 잘 지킨다면, 당신은 많은 개발자들보다 앞설 수 있을 것이다.
+
+나쁜 예:
+```python
+def email_clients(clients: List[Client]):
+    """Filter active clients and send them an email.
+    """
+    for client in clients:
+        if client.active:
+            email(client)
+```
+
+좋은 예:
+```python
+def get_active_clients(clients: List[Client]) -> List[Client]:
+    """Filter active clients.
+    """
+    return [client for client in clients if client.active]
+
+def email_clients(clients: List[Client, ...]) -> None:
+    """Send an email to a given list of clients.
+    """
+    for client in clients:
+        email(client)
+```
+
+제너레이터를 사용할 수 있는 기회가 보이는가?
+
+더 좋은 예:
+```python
+def active_clients(clients: List[Client]) -> Generator[Client]:
+    """Only active clients.
+    """
+    return (client for client in clients if client.active)
+
+def email_client(clients: Iterator[Client]) -> None:
+    """Send an email to a given list of clients.
+    """
+    for client in clients:
+        email(client)
+```
+
+#### Function names should say what they do (함수 이름은 함수가 어떤 작업을 하는지 나타내야 한다.)
+
+나쁜 예:
+```python
+class Email:
+    def handle(self):
+        # Do something...
+
+message = Email()
+message.send()
+```
+
+좋은 예:
+```python
+class Email:
+    def send(self) -> None:
+        """Send this message.
+        """
+
+message = Email()
+message.send()
+```
+
+#### Functions should only be one level of abstraction (함수는 추상화의 한 레벨이어야만 한다.)
+
+하나의 추상 레벨 이상이라면, 당신의 함수는 일반적으로 너무 많은 일을 수행하게 된다.
+재사용성과 쉬운 테스팅을 고려하여 함수를 분리하라!
+
+나쁜 예:
+```python
+def parse_better_js_alternative(code: str) -> None:
+    regexes = [
+        # ...
+    ]
+    
+    statements = regexes.split()
+    tokens = []
+    for regex in regexes:
+        for statement in statements:
+            # ...
+    
+    ast = []
+    for token in tokens:
+        # Lex.
+    
+    for node in ast:
+        # Parse.
+```
+
+좋은 예:
+```python
+REGEXES = (
+    # ...
+)
+
+def parse_better_js_alternative(code: str) -> None:
+    tokens = tokenize(code)
+    syntax_tree = parse(tokens)
+    
+    for node in syntax_tree:
+        # Parse.
+
+def tokenize(code: str) -> list:
+    statements = code.split()
+    tokens = []
+    for regex in REGEXES:
+        for statement in statements:
+            # Append the statement to tokens.
+    
+    return tokens
+
+def parse(tokens: list) -> list:
+    syntax_tree = []
+    for token in tokens:
+        # Append the parsed token to the syntax tree.
+    
+    return syntax_tree
+```
+
+#### Don't use flags as function parameters (함수 파라미터로 flags 를 사용하지 말 것.)
 
 
 
