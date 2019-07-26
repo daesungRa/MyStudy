@@ -62,6 +62,7 @@
 - [Python 에서 날짜와 시간 다루기](./Python/datetime.md) (190508, wed)
 - [Python 에서 JSON 데이터 다루기](./Python/jsoninpython.md) (190508, wed)
 - [Python Docstring 설명](./Python/docstring.md) (190602, sun)
+- [[번역] 파이썬으로 클린 코드 작성하는 방법](./Python/clean-code-python.md) (190721, sun)
 
 ## Clean Code in Python (2019, 마리아노 아나야 지음, 김창수 옮김)
 
@@ -188,14 +189,14 @@
 
 ### Ubuntu
 
+- [Ubuntu 파티셔닝 후 설치](./OperatingSystem/ubuntuPartitioning.md) (190515, wed)
+
 ## Algorithm
 
 - [선택정렬과 버블정렬 예제](./Algorithm/SelectionSort.md) (181228, fri)
 - [사칙연산 응용 예제 - 설탕 배달](./Algorithm/SugarDeliver.md) (181231, mon)
 - [규칙 찾기 - 벌집](./Algorithm/BeeHouse.md) (190101, tue)
 - [규칙 찾기 - 분수 찾기](./Algorithm/FindFraction.md) (190103, thur)
-
-- [Ubuntu 파티셔닝 후 설치](./OperatingSystem/ubuntuPartitioning.md) (190515, wed)
 
 ## 게시판 만들기 연습!!
 

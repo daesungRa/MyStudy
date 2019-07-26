@@ -436,5 +436,97 @@ def parse(tokens: list) -> list:
 
 #### Don't use flags as function parameters (함수 파라미터로 flags 를 사용하지 말 것.)
 
+Flags 는 이 함수가 하나 이상의 일을 한다는 것을 나타낸다. 함수는 하나의 작업만 해야 한다.
+만약 boolean 기반으로 서로 다른 코드 진행을 수행한다면, 함수를 분리할 것.
+
+나쁜 예:
+```python
+from pathlib import Path
+
+def create_file(name: str, temp: bool) -> None:
+    if temp:
+        Path('./temp/' + name).touch()
+    else:
+        Path(name).touch()
+```
+
+좋은 예:
+```python
+from pathlib import Path
+
+def create_file(name: str) -> None:
+    Path(name).touch()
+
+def create_temp_file(name: str) -> None:
+    Path('./temp/' + name).touch()
+```
+
+#### Avoid side effects (사이드 이펙트를 피할 것, 부작용)
+
+함수는 값을 넘겨받고 또다른 값을 반환하는 것 이외의 일을 수행하면 사이드 이펙트를 만들어낸다.
+예를 들어, 사이드 이펙트는 파일을 쓰거나, 몇몇 global 변수를 수정하거나, 우연히 당신의 모든 돈을 낯선 사람에게 연결시킬 수 있다.
+
+때로 프로그램에 사이드 이펙트가 필요할 수 있다. 예를 들어, 앞선 예제처럼 파일 쓰기가 필요하기도 하다.
+이러한 경우에는, 사이드 이펙트들을 집중시켜 통합할 장소를 지정해야 한다.
+여러 함수나 클래스들이 각각의 분리된 파일에 기록하지 않도록 하라. 오히려, 오직 하나의 서비스만이 그 작업을 수행하는 것이 낫다.
+
+핵심은, 어떠한 구조도 없이 객체 간 공동의 상태를 공유하는 것이나, 무엇으로부터도 변화할 수 있는 가변 데이터 타입을 사용하는 것,
+클래스의 인스턴스를 사용하거나 사이드 이펙트들이 발생하는 장소를 집중화시키지 않는 것과 같이 일반적으로 빠져들기 쉬운 함정을 피하는 것이다.
+만약 이렇게 할 수 있다면, 당신은 수많은 다른 개발자들보다 더 행복해질 것이다.
+
+나쁜 예:
+```python
+# This is a module-level name.
+# It's good practice to define these as immutable values, such as a string.
+# However...
+name = 'Daesung Ra'
+
+def split_into_first_and_last_name() -> None:
+    # The use of the global keyword here is changing the meaning of the
+    # the following line. This function is now mutating the module-level
+    # state and introducing a side-effect!
+    global name
+    name = name.split()
+
+split_into_first_and_last_name()
+
+print(name) # ['Daesung', 'Ra']
+
+# OK. It worked the first time, but what will happen if we call the
+# function again?
+```
+
+좋은 예:
+```python
+def split_into_first_and_last_name(name: str) -> None:
+    return name.split()
+
+name = 'Daesung Ra'
+new_name = split_into_first_and_last_name(name)
+
+print(name) # 'Daesung Ra'
+print(new_name) # ['Daesung', 'Ra']
+```
+(매개변수로 넘어가는 값은 같은 객체를 참조하지는 않는다, shallow copy?)
+
+또 다른 좋은 예:
+```python
+from dataclasses import dataclass
+
+@dataclass
+class Person:
+    name: str
+    
+    @property
+    def name_as_first_and_last(self) -> list:
+        return self.name.split()
+
+# The reason why we create instances of classes is to manage state!
+# 우리가 클래스의 인스턴스를 생성하는 이유는 상태(state)를 관리하기 위해서임!
+person = Person('Daesung Ra')
+print(person.name)
+print(person.name_as_first_and_last) # ['Daesung', 'Ra']
+```
+
 
 
