@@ -19,7 +19,7 @@
 - ```for e in myobject:``` 형태로 객체를 반복할 수 있는지 확인하기 위해 파이썬은 고수준에서 다음 두 가지를 차례로 검사한다.
     * 객체가 iter, next 매직 메서드 중 하나를 포함하는지 여부
     * 객체가 시퀀스이고 **\_\_len\_\_** 과 **\_\_getitem\_\_** 을 모두 가졌는지 여부
-- fallback 메커니즘으로 시퀀스도 반복을 할 수 있으므로, for 루프에서반복 가능한 객체를 만드는 방법은 두 가지가 있다.
+- fallback 메커니즘으로 시퀀스도 반복을 할 수 있으므로, for 루프에서 반복 가능한 객체를 만드는 방법은 두 가지가 있다.
 
 ## 이터러블 객체 만들기
 
@@ -85,6 +85,7 @@ StopIteration
 ```
 - 다만, 마지막 도달 이후 반복 호출 시 StopIteration 예외가 계속해서 발생할 수 있는데,
 - 이터러블 반복 시에는 두 개 이상의 for 루프에서 이 값을 사용하면 첫 번째 루프만 작동하도록 되어 있으므로 이 문제가 해결된다.
+- 그러나, 한번 반복실행하여 마지막 날짜에 도달한 상태인 객체를 다시 한번 호출하면 계속 **StopIteration** 예외가 발생한다.
 ```text
 >>> r1 = DateRangeIterable(date(2019, 1, 1), date(2019, 1, 5))
 >>> ", ".join(map(str, r1))
@@ -94,8 +95,32 @@ Traceback (most recent call last):
     File "<stdin>", line 1, in <module>
 ValueError: max() arg is an empty sequence
 ```
-
-
-
+- \_\_iter\_\_ 에서 제너레이터를 활용하면 이 문제를 해결할 수 있다.
+```python
+class DateRangeContainerIterable:
+    def __init__(self, start_date, end_date):
+        self.start_date = start_date
+        self.end_date = end_date
+    
+    def __iter__(self):
+        current_day = self.start_date
+        while current_day < self.end_date
+            yield current_day
+            current_day += timedelta(days=1)
+```
+- 잘 동작한다.
+```text
+>>> r1 = DateRangeIterable(date(2019, 1, 1), date(2019, 1, 5))
+>>> ", ".join(map(str, r1))
+'2019-01-01, 2019-01-02, 2019-01-03, 2019-01-04'
+>>> max(r1)
+datetime.date(2018, 1, 4)
+>>>
+```
+- 이 때는 반복해서 호출해도 매번 새로운 제너레이터 객체를 생성한다.
+- 이러한 형태의 객체를 컨테이너 이터러블(container iterable)이라고 한다.
+```text
+tip: 일반적으로 제너레이터를 사용할 때는 컨테이너 이터러블을 사용하는 것이 좋다.
+```
 
 
