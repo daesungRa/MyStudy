@@ -200,7 +200,7 @@
 
 ## 게시판 만들기 연습!!
 
-- [[BoardTest01] 프로젝트 생성부터 MVC 만들고 임시테스트까지](./SpringPractice/[springmvc-BoardTest01]init_to_testLogic.md) (190124, thur)
+- [[BoardTest01] 프로젝트 생성부터 MVC 만들고 임시테스트까지](./SpringPractice/[springmvc-영어 대화BoardTest01]init_to_testLogic.md) (190124, thur)
 
 ## GroupStudy
 
@@ -216,6 +216,7 @@
 
 - ["Who are you" 와 "Who you are" 의 차이](./EnglishConversation/whoaretyouwhoyouare.md) (190610, mon)
 - [Introduce Myself in English](./EnglishConversation/introduceMyself.md) (190615, sat)
+- [[이번주 한문장] 오랜만에 만났을 때, 학교에서](EnglishConversation/weekly_centence_190810_SAT.md) (190810, sat)
 
 ## 기타 정보
 
