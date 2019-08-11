@@ -114,5 +114,24 @@ Why? How come?<br/>
 어린이집
 - nursery school / day care center
 
+### 오늘의 회화
+너 점점 나아진다~<br/>
+You are getting better.
+
+돈이면 다 된다.<br/>
+Money talks.
+
+땅 판다고 돈 나오는거 아니다.<br/>
+Money don't grow up on tree.
+
+너는 나를 미치게 만든다.<br/>
+You are drive me crazy.
+
+외식하자!<br/>
+Let's eat out!
+
+상부상조<br/>
+Win win situation
+
 
 
