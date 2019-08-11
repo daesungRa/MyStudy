@@ -32,7 +32,7 @@ Let's get in touch!<br/>
 Let's stay in touch!<br/>
 
 * holiday, vacation
-    - 공휴일의 뉘앙스로 알고 있지만, 휴가나 방학의 의미로도 많이 사용됨.
+    - holiday : 공휴일의 뉘앙스로 알고 있지만, 휴가나 방학의 의미로도 많이 사용됨.
     - vacation 은 (직장) 휴가란 의미,
     - 만약 학교 방학이란 의미로 사용하려면 -> school vacation
 
@@ -52,11 +52,12 @@ Good morning, class! (everyone!)<br/>
 * 교생선생님 : student teacher
 * 조교 : teaching assistant, research assistant
 * 급우 : classmate
-* (회사) 동료 : associate, collage, coworker
+* (회사) 동료 : associate, colleague, coworker
 
-환영해요!
+환영해요!<br/>
 Welcome to our class!<br/>
 Welcome on board~ -> (한 배를 탄 것을) 환영해요~<br/>
+I just come on board -> 이제 막 합류했어요.<br/>
 We are in the same boat<br/>
 
 **[이거 기억해두자]**<br/>
@@ -72,8 +73,46 @@ How should I address you? (call you?)
     - 프리젠트 : (동) (선물을) 주다
     - Minsoo is 프레즌트 this time.
 * absent
-    - Yoomi is 앱슨트 last week.
+    - Yoomi was 앱슨트 last week.
 * 조퇴하다 : She left early.
+
+왜? 왜 늦나요?<br/>
+Why? How come?<br/>
+- Why are you late?
+- How come you are late?
+- 첫 번째 문장은 동사 + 주어 순이고, 두 번째 문장은 How come 이후에 주어동사의 완전한 절이 온다.
+
+감기<br/>
+* cold : 그냥 감기
+* flu : 독감
+* bad cold, bad flu : 심한 감기, 심한 독감
+* catch a flu : 독감에 걸리다
+
+들르다, (가는 길에) 잠깐 들르다<br/>
+* call on
+* drop by, drop in
+* stop by
+* come by
+* Let's call on her after school -> 학교 끝나고 그녀 집에 잠깐 들르자.
+
+늦잠<br/>
+* oversleep : 늦잠자면 안되는데 늦잠
+* sleep in : 늦잠잘 생각으로 늦잠
+* 늦어서 죄송합니다.
+    - I'm sorry I'm late
+    - I'm sorry to be late
+    - I'm sorry for being late
+
+다음 번엔 늦지 마라.<br/>
+네, 안 늦을게요.<br/>
+- Don't be late next time.
+- Yes, I'll try not to (be late).
+
+~ 에 답할 수 있는 사람 있나요?
+- Is there anyone who can answer the question?
+
+어린이집
+- nursery school / day care center
 
 
 
