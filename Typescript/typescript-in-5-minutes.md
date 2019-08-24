@@ -9,7 +9,7 @@ url : [typescript tutorial](https://www.typescriptlang.org/docs/handbook/typescr
 
 타입스크립트로 간단한 웹 어플리케이션을 빌드해보자.
 
-#### TypeScript 설치
+## TypeScript 설치
 
 TypeScript 툴을 설치하는 데에는 크게 두 가지 방법이 있다.
 
@@ -23,7 +23,7 @@ For NPM users:
 > npm install -g typescript
 ```
 
-#### 첫 TypeScript 파일 빌드하기
+## 첫 TypeScript 파일 빌드하기
 
 당신의 편집기에서 다음의 JavaScript 코드를 입력하고 ```greeter.ts``` 파일을 생성하라.
 
@@ -37,7 +37,7 @@ let user = "Jane User";
 document.body.textContent = greeter(user);
 ```
 
-#### 코드 컴파일
+## 코드 컴파일
 
 우리는 ```.ts``` 확장자를 사용했지만, 이것은 아직은 단지 JavaScript 이다.
 당신은 이것을 JavaScript app 에 곧바로 **복사/붙여넣기**할 수 있다.
@@ -63,7 +63,7 @@ let user = "Jane User";
 document.body.textContent = greeter(user);
 ```
 
-#### 타입 어노테이션
+## 타입 어노테이션
 
 TypeScript 의 타입 어노테이션은 함수 혹은 변수의 의도된 약속을 기록하는 경량화된 방식이다.
 이 경우, 우리는 ```greeter``` 함수가 단일 문자열 파라미터에 의해 호출되도록 의도할 수 있다.

@@ -64,7 +64,7 @@
 - [Python 에서 JSON 데이터 다루기](./Python/jsoninpython.md) (190508, wed)
 - [Python Docstring 설명](./Python/docstring.md) (190602, sun)
 - [[번역] 파이썬으로 클린 코드 작성하는 방법](./Python/clean-code-python.md) (190721, sun)
-- [[세미나] 정적 타입 검사 mypy 설명](./Python/static_type_test) (190824, sat)
+- [[세미나] 정적 타입 검사 mypy 설명](./Python/static_type_test.md) (190824, sat)
 
 ## Clean Code in Python (2019, 마리아노 아나야 지음, 김창수 옮김)
 
