@@ -106,6 +106,10 @@
 
 - [[번역]오분만에 살펴보는 TypeScript](./Typescript/typescript-in-5-minutes.md) (190824, sat)
 
+## VanillaJS
+
+- [[번역]Introduction to Vanilla JS](VanillaJS/intro-for-vanillajs.md) (190824, sat)
+
 ## JSP Servlet
 
 - [Cookie 와 Session, 그리고 HTTP](./JSP_Servlet/CookieAndSession.md) (181231, mon)
