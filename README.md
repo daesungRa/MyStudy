@@ -22,9 +22,10 @@
 2. Web, Web Framework
     1. [HTML/CSS](#HTML-CSS)
     2. [Javascript](#Javascript)
-    3. [JSP/Servlet](#JSP-Servlet)
-    4. [Spring](#Spring)
-    5. [Flask](#Flask)
+    3. [TypeScript](#TypeScript)
+    4. [JSP/Servlet](#JSP-Servlet)
+    5. [Spring](#Spring)
+    6. [Flask](#Flask)
 3. Databases
     1. [RDBMS](#RDBMS)
     2. [NoSQL](#NoSQL)
@@ -100,6 +101,10 @@
 - [[AJAX] Ajax 기초 06 - AJAX 게시판 - 다중 파일 업로드 스크립트 처리](./Javascript/Ajax05AjaxBoard_multiFileUpload.md) (190211, mon)
 - [[jQuery] Ajax 기초 01 - jQuery 기초](./Javascript/jQuery01.md) (190212, tue)
 - [[AJAX JSON] ajax 로 json 데이터 전송 (with flask)](./Javascript/ajaxjson.md) (190521, tue)
+
+## TypeScript
+
+- [[번역]오분만에 살펴보는 TypeScript](./Typescript/typescript-in-5-minutes.md) (190824, sat)
 
 ## JSP Servlet
 
