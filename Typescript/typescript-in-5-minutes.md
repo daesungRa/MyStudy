@@ -67,3 +67,30 @@ document.body.textContent = greeter(user);
 
 TypeScript 의 타입 어노테이션은 함수 혹은 변수의 의도된 약속을 기록하는 경량화된 방식이다.
 이 경우, 우리는 ```greeter``` 함수가 단일 문자열 파라미터에 의해 호출되도록 의도할 수 있다.
+이제 배열을 대신 전달하도록 ```greeter``` 함수의 호출 부분을 변경해보자.
+
+```text
+function greeter(person: string) {
+    return "Hello, " + person;
+}
+
+let user = [0, 1, 2];
+
+document.body.textContent = greeter(user);
+```
+
+재컴파일을 하면, 다음과 같은 에러 메시지를 보게 된다.
+
+```text
+error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string'.
+```
+
+유사하게, ```greeter``` 함수 호출부에 모든 인자를 제거해볼 수 있다.
+TypeScript 는 당신이 기대되지 않는 개수의 파라미터와 함께 이 함수를 호출했다는 사실을 알려준다.
+이때 TypeScript 는 당신이 작성한 두 가지 구조의 코드와 타입 어노테이션에 기반한 정적 분석 결과를 제공할 수 있다.
+
+에러가 있다고 하더라도 ```greeter.js``` 파일은 여전히 생성된다는 사실을 숙지하라.
+당신의 코드에 에러가 있어도 TypeScript 를 사용할 수 있다.
+그러나 이 경우 TypeScript 는 당신의 코드가 기대하지 않는 방식으로 실행될 수도 있다는 사실을 경고한다.
+
+## 인터페이스
