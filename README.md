@@ -104,11 +104,15 @@
 
 ## TypeScript
 
-- [[번역]오분만에 살펴보는 TypeScript](./Typescript/typescript-in-5-minutes.md) (190824, sat)
+- [[번역] 오분만에 살펴보는 TypeScript](./Typescript/typescript-in-5-minutes.md) (190824, sat)
 
 ## VanillaJS
 
-- [[번역]Introduction to Vanilla JS](VanillaJS/intro-for-vanillajs.md) (190824, sat)
+- [[번역] Introduction to Vanilla JS](VanillaJS/intro-to-vanillajs.md) (190824, sat)
+
+## VueJS
+
+- [[번역] Vue JS 배우기](VueJS/intro-to-vuejs.md) (190824, sat)
 
 ## JSP Servlet
 
