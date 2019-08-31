@@ -33,12 +33,12 @@ Vue 는 밑바닥으로부터 점증적으로 적용 가능하도록 디자인�
 
 ```text
 들어가기 전에: 이 공식 가이드는 HTML, CSS, 그리고 JavaScript 에 중급 레벨 이상이라고 가정한다. 만약 당신이 프론트엔드 개발에 완전히 처음이라면,
-첫 번째 단계로써 바로 프레임워크로 건너뛰는 것은 좋은 생각이 아닐 수 있으므로, 기본을 파악한 위 다시 돌아오도록 하라.
+첫 번째 단계로써 바로 프레임워크로 건너뛰는 것은 좋은 생각이 아닐 수 있으므로, 기본을 파악한 뒤 다시 돌아오도록 하라.
 다른 프레임워크에 대한 선험적 경험은 도움이 되지만, 꼭 요구되는 것은 아니다.
 ```
 
 Vue.js 에 도전하는 가장 손쉬운 방법은 [JSFiddle Hello World example](https://jsfiddle.net/chrisvfritz/50wL7mdz/) 을 사용하는 것이다.
-다른 탭에 이것을 열고 몇몇 기본적인 샘플에 따라가는 것에 주저하지 말아라. 아니면, 당신은 [**index.html** 파일을 생성](https://gist.githubusercontent.com/chrisvfritz/7f8d7d63000b48493c336e48b3db3e52/raw/ed60c4e5d5c6fec48b0921edaed0cb60be30e87c/index.html)하여 다음과 같이 Vue 에 포함시킬 수 있다.:
+다른 탭에 이것을 열고 몇몇 기본적인 샘플에 따라가는 것에 주저하지 말아라. 아니면, 당신은 [**index.html** 파일을 생성](https://gist.githubusercontent.com/chrisvfritz/7f8d7d63000b48493c336e48b3db3e52/raw/ed60c4e5d5c6fec48b0921edaed0cb60be30e87c/index.html)하여 다음과 같이 Vue 를 포함시킬 수 있다.:
 
 ```html
 <!-- development version, includes helpful console warnings -->
@@ -56,3 +56,5 @@ Vue.js 에 도전하는 가장 손쉬운 방법은 [JSFiddle Hello World example
 특히 당신이 만약 Node.js-기반 빌드 툴에 친숙하지 않다면, 우리는 입문자들이 ```vue-cli``` 와 함께 시작하는 것을 **요구하지 않는다.**
 
 만약 좀더 상호적인 것을 선호한다면, 언제든지 일지정지하고 플레이할 수 있는 mix of screencast 와 코드 플레이그라운드를 제공하는 [this tutorial series on Scrimba](https://scrimba.com/playlist/pXKqta) 를 참조할 수 있다.
+
+#### 
