@@ -230,8 +230,8 @@
 
 - ["Who are you" 와 "Who you are" 의 차이](./EnglishConversation/whoaretyouwhoyouare.md) (190610, mon)
 - [Introduce Myself in English](./EnglishConversation/introduceMyself.md) (190615, sat)
-- [[이번주 한문장] 오랜만에 만났을 때, 학교에서](EnglishConversation/weekly_centence_190810_SAT.md) (190810, sat)
-- [[이번주 한문장] 우산 같이 써, 서점, 도서관, 학교, 놀자!](EnglishConversation/weekly_centence_190831_SAT.md) (190831, sat)
+- [[이번주 한문장] 오랜만에 만났을 때, 학교에서](EnglishConversation/weekly_sentence_190810_SAT.md) (190810, sat)
+- [[이번주 한문장] 우산 같이 써, 서점, 도서관, 학교, 놀자!](EnglishConversation/weekly_sentence_190831_SAT.md) (190831, sat)
 
 ## 기타 정보
 
