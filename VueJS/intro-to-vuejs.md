@@ -57,4 +57,78 @@ Vue.js 에 도전하는 가장 손쉬운 방법은 [JSFiddle Hello World example
 
 만약 좀더 상호적인 것을 선호한다면, 언제든지 일지정지하고 플레이할 수 있는 mix of screencast 와 코드 플레이그라운드를 제공하는 [this tutorial series on Scrimba](https://scrimba.com/playlist/pXKqta) 를 참조할 수 있다.
 
-#### 
+#### 선언적 렌더링
+
+vue.js 의 코어는 데이터를 DOM 에 직접적인 템플릿 문법을 활용해 선언적으로 렌더링할 수 있는 시스템이다.
+
+```html
+<div id="app">
+    {{ message }}
+</div>
+```
+
+```html
+var app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue!'
+    }
+})
+```
+
+result
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+</script>
+
+<div id="app">
+    {{ message }}
+</div>
+
+이로써 우리는 첫 Vue 앱을 만들었다.
+이것은 문자열 템플릿을 렌더링한 것과 유사해 보이지만, Vue 는 물밑에서 많은 작업을 수행했다.
+데이터와 DOM 은 연결되었고, 모든 것은 이제 reactive 하다. 이것을 어떻게 아는가?
+당신의 브라우저에 있는 JavaScript 콘솔을 열고(지금 이 페이지에서) ```app.message``` 에 다른 값을 할당하라.
+그러면 업데이트에 따라 렌더링된 예시를 볼 수 있을 것이다.
+
+추가적인 텍스트 interpolation 으로 우리는 element 속성값을 다음과 같이 bind 할 수 있다:
+
+```html
+<div id="app-2">
+    <span v-bind:title="message">
+        Hover your mouse over me for a few seconds
+        to see my dynamically bound title!
+    </span>
+</div>
+```
+
+```html
+var app2 = new Vue({
+    el: '#app-2',
+    data: {
+        message: 'You loaded this page on ' + new Date().toLocaleString()
+    }
+})
+```
+
+result
+<script>
+    var app2 = new Vue({
+        el: '#app-2',
+        data: {
+            message: 'You loaded this page on ' + new Date().toLocaleString()
+        }
+    })
+</script>
+
+<div id="app-2">
+    <span v-bind:title="message">
+        Hover your mouse over me for a few seconds
+        to see my dynamically bound title!
+    </span>
+</div>
