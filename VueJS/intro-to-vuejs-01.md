@@ -61,7 +61,7 @@ Vue.js 에 도전하는 가장 손쉬운 방법은 [JSFiddle Hello World example
 
 #### 선언적 렌더링
 
-vue.js 의 코어는 데이터를 DOM 에 직접적인 템플릿 문법을 활용해 선언적으로 렌더링할 수 있는 시스템이다.
+vue.js 의 코어는 데이터를 DOM 에 간단한 템플릿 문법을 활용해 선언적으로 렌더링할 수 있는 시스템이다.
 
 ```html
 <div id="app">
