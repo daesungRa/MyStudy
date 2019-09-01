@@ -77,22 +77,13 @@ var app = new Vue({
 ```
 
 result
-<script>
-    var app = new Vue({
-        el: '#app',
-        data: {
-            message: 'Hello Vue!'
-        }
-    })
-</script>
-
-<div id="app">
-    {{ message }}
-</div>
+```text
+    Hello Vue!
+```
 
 이로써 우리는 첫 Vue 앱을 만들었다.
 이것은 문자열 템플릿을 렌더링한 것과 유사해 보이지만, Vue 는 물밑에서 많은 작업을 수행했다.
-데이터와 DOM 은 연결되었고, 모든 것은 이제 reactive 하다. 이것을 어떻게 아는가?
+데이터와 DOM 은 연결되었고, 모든 것은 이제 **reactive**(반응적) 하다. 이것을 어떻게 아는가?
 당신의 브라우저에 있는 JavaScript 콘솔을 열고(지금 이 페이지에서) ```app.message``` 에 다른 값을 할당하라.
 그러면 업데이트에 따라 렌더링된 예시를 볼 수 있을 것이다.
 
@@ -117,18 +108,137 @@ var app2 = new Vue({
 ```
 
 result
-<script>
-    var app2 = new Vue({
-        el: '#app-2',
-        data: {
-            message: 'You loaded this page on ' + new Date().toLocaleString()
-        }
-    })
-</script>
+```text
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+```
 
-<div id="app-2">
-    <span v-bind:title="message">
-        Hover your mouse over me for a few seconds
-        to see my dynamically bound title!
-    </span>
+여기서 우리는 새로운 것을 발견할 수 있다.
+보다시피 ```v-bind``` 속성은 **directive**(디렉티브) 로써 호출된다. (여기서 디렉티브는 vue 에서 사용되는 용어인듯)
+디렉티브는 자신이 Vue 에 의해 제공된 특별한 속성이라는 것을 지정하기 위해 ```v-``` 로 prefixed 되고, 추측할 수 있듯이,
+렌더링된 DOM 에 특별한 반응형 동작으로써 적용된다.
+여기서 이것은 기본적으로 "```title``` 속성값을 Vue 인스턴스의 ```message``` 값으로 업데이트 하도록 해라" 라고 명령한다.
+
+#### 조건문과 반복문
+
+또한 엘리먼트의 존재를 toggle 하는 것은 쉽다:
+
+```html
+<div id="app-3">
+    <span v-if="seen">Now you see me</span>
 </div>
+```
+
+```html
+var app3 = new Vue({
+    el: '#app-3',
+    data: {
+        seen: true
+    }
+})
+```
+
+result
+```text
+    Now you see me
+```
+
+콘솔에 ```app3.seen = false``` 를 입력하라. 그러면 위 메시지가 사라지는 것을 볼 수 있다.
+
+이 예제는 텍스트나 속성값 뿐만 아니라 DOM 구조에도 data 를 bind 할 수 있다고 설명하고 있다.
+게다가, Vue 는 또한 elements 가 Vue 에 의해 삽입/수정/삭제될 때 자동적으로 [transition effects](https://vuejs.org/v2/guide/transitions.html) 를 적용할 수 있는 강력한 transition effect system(변이 효과 시스템)을 제공한다.
+
+또다른 몇몇 디렉티브가 존재하는데, 각각은 자신만의 특별한 기능을 가지고 있다.
+예를 들어, ```v-for``` 디렉티브는 배열 데이터를 활용해 item 의 리스트를 나타내는데 사용된다:
+
+```html
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+</div>
+```
+
+```html
+var app4 = new Vue({
+    el: '#app-4',
+    data: {
+        todos: [
+            { text: 'Learn JavaScript' },
+            { text: 'Learn Vue' },
+            { text: 'Build something awesome' }
+        ]
+    }
+})
+```
+
+result
+```text
+    1. Learn JavaScript
+    2. Learn Vue
+    3. Build something awesome
+```
+
+콘솔에서 ```app4.todos.push({ text: 'New item' })``` 을 입력하라. 그러면 리스트에 새로운 아이템이 추가된 것을 볼 수 있다.
+
+#### 사용자 입력정보 다루기
+
+사용자가 당신의 app 과 상호작용하도록 하기 위해서, 우리는 Vue 인스턴스의 메서드를 invoke 시키는 이벤트를 붙여넣기 위하여 ```v-on``` 디렉티브를 사용할 수 있다.
+
+```html
+<div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+```
+
+```text
+var app5 = new Vue({
+    el: '#app-5',
+    data: {
+        message: 'Hello Vue.js!'
+    },
+    methods: {
+        reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+        }
+    }
+})
+```
+
+result
+```text
+Hello Vue.js!
+(Reverse Message button)
+```
+
+이 메서드에서는 DOM 객체를 touch 하지 않고 우리의 app 의 상태를 update 한다는 사실을 숙지하라.
+모든 DOM 의 조작은 Vue 에 의해 이루어지고, 당신이 작성한 코드는 숨겨진 로직에 초점이 맞춰진다.
+
+Vue 는 또한 form input 과 app state 사이에서 두 경로로 바인딩하는 ```v-model``` 디렉티브를 제공한다.
+
+```html
+<div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+</div>
+```
+
+```text
+var app6 = new Vue({
+    el: '#app-6',
+    data: {
+        message: 'Hello Vue!'
+    }
+})
+```
+
+result
+```text
+Hello Vue!
+(Hello Vue input text box)
+```
+
+
