@@ -112,7 +112,8 @@
 
 ## VueJS
 
-- [[번역] Vue JS 배우기](VueJS/intro-to-vuejs.md) (190824, sat)
+- [[번역] Vue JS 배우기 01](VueJS/intro-to-vuejs-01.md) (190824, sat)
+- [[번역] Vue JS 배우기 02](VueJS/intro-to-vuejs-02.md) (190901, sun)
 
 ## JSP Servlet
 

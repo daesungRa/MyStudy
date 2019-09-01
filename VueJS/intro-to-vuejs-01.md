@@ -2,7 +2,9 @@
 ![author](https://img.shields.io/badge/author-daesungRa-lightgray.svg?style=flat-square)
 ![date](https://img.shields.io/badge/date-190824-lightgray.svg?style=flat-square)
 
-# Vue JS
+# Vue JS [01]
+
+참조: [Introduction Vue.js](https://vuejs.org/v2/guide/)
 
 > 접근성 : HTML, CSS, JavaScript 만 알면됨!
 
@@ -10,7 +12,7 @@
 
 > 고성능 : 20KB min+gzip 컴팩트 런타임! 초고속 Virtual DOM!
 
-> == 최소의 노력, 최대의 성과!
+> 최소의 노력, 최대의 성과!
 
 ## 소개
 
