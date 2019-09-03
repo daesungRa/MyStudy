@@ -17,3 +17,10 @@ The component 시스템은 Vue 의 또다른 주요한 컨셉트인데,
 
 Vue 에서 하나의 component 는 본질적으로 사전에 정의된 옵션을 포함하는 Vue 인스턴스이다.
 Vue 에 component 를 등록하는 것은 간단하다.
+
+```javascript
+// Define a new component called todo-item
+Vue.component('todo-item', {
+    template: '<li>This is a todo</li>'
+})
+```
