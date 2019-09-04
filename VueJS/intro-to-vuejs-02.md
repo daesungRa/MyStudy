@@ -109,3 +109,29 @@ var app7 = new Vue({
     </app-view>
 </div>
 ```
+
+#### 커스텀 요소 간 관계
+
+당신은 아마도 Vue 컴포넌트들이 [Web Components Spec](https://www.w3.org/wiki/WebComponents/) 의 한 부분인 **Custom Elements** 와 매우 유사하다는 것을 알게 되었을지 모른다.
+그 이유는 Vue 의 컴포넌트 문법이 spec 이후로 느슨하게 모델링되었기 때문이다.
+예를 들어, Vue 컴포넌트는 [Slot API](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md) 와 특별 속성인 ```is``` 를 구현하지만,
+그곳에는 몇몇 주요한 차이점이 존재한다:
+
+```text
+    1. The Web Components Spec has been finalized, but is not natively implemented in every browser. Safari 10.1+,
+       Chrome 54+ and Firefox 63+ natively support web components. In comparison, Vue components don't require any
+       polyfills and work consistently in all supported browsers (IE9 and above). When needed, Vue components can also
+       be wrapped inside a native custom element.
+    
+    2. Vue components provide important features that are not available in plain custom elements, most notably cross-
+       component data flow, custom event communication and build tool integrations.
+```
+
+비록 Vue 는 내부적으로 사용자 정의 요소를 사용하지 않지만, 그것이 사용자 정의 요소로써 사용되거나 배포될 때 훌륭한 상호운용성을 갖는다.
+Vue CLI 는 또한 자신 스스로 native custom elements 로 등록되는 Vue 컴포넌트를 building 하는 것을 지원한다.
+
+#### 무엇을 더 해야 할까?
+
+지금까지 가장 기본적인 Vue.js 코어의 기능을 간략하게 소개했다.
+이후 나머지 가이드는 이것을 더 섬세한 디테일로 보충하거나 발전시키는 기능이다.
+그러므로 이것을 읽는 것만으로 충분하다!
