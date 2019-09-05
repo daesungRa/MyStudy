@@ -43,3 +43,97 @@ Root Instance
 (몇몇 root-specific options 제외)
 
 ## Data 와 Methods
+
+Vue 인스턴스가 생성되었다면, 그것은 Vue 의 **reactivity system** 에 자신의 **data** 객체에서 찾은 속성들을 추가한다.
+이러한 속성들의 값이 바뀌면 view 는 새로운 값에 알맞게 updating 되는 방식으로 "반응(react)" 한다.
+
+```javascript
+// Our data object
+var data = { a: 1 }
+
+// The object is added to a Vue instance
+var vm = new Vue({
+    data: data
+})
+
+// Getting the property on the instance
+// returns the one from the original data
+vm.a == data.a // => true
+
+// Setting the property on the instance
+// also affects the original data
+vm.a = 2
+data.a // => 2
+
+// ... and vice-versa
+data.a = 3
+vm.a // => 3
+```
+
+이 data 가 바뀔 때 view 는 다시 렌더링된다.
+**data** 의 속성들은 인스턴스가 생성되었을 때 자신들이 존재할 경우에만 반응한다는 사실을 꼭 알아두자.
+그러므로 만약 당신이 새로운 속성을 다음과 같이 추가한다면,:
+
+```text
+vm.b = 'hi'
+```
+
+**b** 로 인한 변화는 어떠한 view updates 도 야기시키지 않는다.
+만약 애초부터 비어 있거나 존재하지 않는 속성을 나중에 추가할 필요가 생긴다면, 몇몇 initial value 를 다음과 같이 지정해야 한다.
+
+```text
+data: {
+    newTodoText: '',
+    visitCount: 0,
+    hideCompletedTodos: false,
+    todos: [],
+    error: null
+}
+```
+
+여기서 단 하나 예외는 이미 존재하는 속성이 바뀌는 것을 사전에 차단하는 **Object.freeze()** 를 사용하는 경우인데,
+이는 반응성 시스템(reactivity system)이 변화를 추적하지 못함을 의미한다.
+
+```javascript
+var obj = {
+    foo: 'bar'
+}
+
+Object.freeze(obj)
+
+new Vue({
+    el: '#app',
+    data: obj
+})
+```
+
+```html
+<div id="app">
+    <p>{{ foo }}</p>
+    <!-- this will no longer update 'foo'! -->
+    <button v-on:click="foo = 'baz'">Chango it</button>
+</div>
+```
+
+data 속성을 추가하기 위해 Vue 인스턴스는 수많은 유용한 인스턴스 속성과 메서드를 제공한다.
+이것들은 사용자 정의 속성들로부터 구별짓기 위해 **$** 로 prefixed 되었다. 다음을 보자:
+
+```javascript
+var data = { a: 1 }
+var vm = new Vue({
+    el: '#example',
+    data: data
+})
+
+vm.$data === data // => true
+vm.$el === document.getElementById('example') // => true
+
+// $watch is an instance method
+vm.$watch('a', function (newValue, oldValue) {
+    // This callback will be called when 'vm.a' changes
+})
+```
+
+나중에 인스턴스 속성과 메서드의 전체 목록을 [API reference](https://vuejs.org/v2/api/#Instance-Properties) 에서 찾아볼 수 있을 것이다.
+
+## 인스턴스 수명주기
