@@ -2,7 +2,7 @@
 ![author](https://img.shields.io/badge/author-daesungRa-lightgray.svg?style=flat-square)
 ![date](https://img.shields.io/badge/date-190824-lightgray.svg?style=flat-square)
 
-# Vue JS [01]
+# Vue JS [01] 소개
 
 참조: [Introduction Vue.js](https://vuejs.org/v2/guide/)
 
@@ -14,9 +14,7 @@
 
 > 최소의 노력, 최대의 성과!
 
-## 소개
-
-#### Vue.js 가 무엇인가?
+## Vue.js 가 무엇인가?
 
 Vue(pronounced /vju:/, like **view**) 는 사용자 인터페이스를 위한 **진보적 프레임워크**이다.
 다른 monolithic(단단하게 하나로 짜여져 있는) 프레임워크들과는 다르게,
@@ -31,7 +29,7 @@ Vue 는 밑바닥으로부터 점증적으로 적용 가능하도록 디자인�
 
 - [Watch a free video course on Vue Mastery](https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/)
 
-#### 시작하기
+## 시작하기
 
 ```text
 들어가기 전에: 이 공식 가이드는 HTML, CSS, 그리고 JavaScript 에 중급 레벨 이상이라고 가정한다. 만약 당신이 프론트엔드 개발에 완전히 처음이라면,
@@ -59,7 +57,7 @@ Vue.js 에 도전하는 가장 손쉬운 방법은 [JSFiddle Hello World example
 
 만약 좀더 상호적인 것을 선호한다면, 언제든지 일지정지하고 플레이할 수 있는 mix of screencast 와 코드 플레이그라운드를 제공하는 [this tutorial series on Scrimba](https://scrimba.com/playlist/pXKqta) 를 참조할 수 있다.
 
-#### 선언적 렌더링
+## 선언적 렌더링
 
 vue.js 의 코어는 데이터를 DOM 에 간단한 템플릿 문법을 활용해 선언적으로 렌더링할 수 있는 시스템이다.
 
@@ -121,7 +119,7 @@ result
 렌더링된 DOM 에 특별한 반응형 동작으로써 적용된다.
 여기서 이것은 기본적으로 "```title``` 속성값을 Vue 인스턴스의 ```message``` 값으로 업데이트 하도록 해라" 라고 명령한다.
 
-#### 조건문과 반복문
+## 조건문과 반복문
 
 또한 엘리먼트의 존재를 toggle 하는 것은 쉽다:
 
@@ -185,7 +183,7 @@ result
 
 콘솔에서 ```app4.todos.push({ text: 'New item' })``` 을 입력하라. 그러면 리스트에 새로운 아이템이 추가된 것을 볼 수 있다.
 
-#### 사용자 입력정보 다루기
+## 사용자 입력정보 다루기
 
 사용자가 당신의 app 과 상호작용하도록 하기 위해서, 우리는 Vue 인스턴스의 메서드를 invoke 시키는 이벤트를 붙여넣기 위하여 ```v-on``` 디렉티브를 사용할 수 있다.
 

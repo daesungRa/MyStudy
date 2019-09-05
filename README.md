@@ -114,7 +114,7 @@
 
 - [[번역] Vue JS 배우기 01](VueJS/intro-to-vuejs-01.md) (190824, sat)
 - [[번역] Vue JS 배우기 02](VueJS/intro-to-vuejs-02.md) (190901, sun)
-- [[번역] Vue 인스턴스](VueJS/the_vue_instance.md) (190905, thur)
+- [[번역] 모든 Vue 컴포넌트는 Vue 인스턴스다?!](VueJS/the_vue_instance.md) (190905, thur)
 
 ## JSP Servlet
 

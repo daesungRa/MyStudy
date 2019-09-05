@@ -2,11 +2,11 @@
 ![author](https://img.shields.io/badge/author-daesungRa-lightgray.svg?style=flat-square)
 ![date](https://img.shields.io/badge/date-190901-lightgray.svg?style=flat-square)
 
-# Vue JS [02]
+# Vue JS [02] 소개2
 
 참조: [Introduction Vue.js](https://vuejs.org/v2/guide/)
 
-#### 부품 조립하기
+## 부품 조립하기
 
 The component 시스템은 Vue 의 또다른 주요한 컨셉트인데,
 이것(The component system)이 우리로 하여금 작은 부품들, self-contained, 재사용 가능한 부품들로 조립된 큰 규모의 어플리케이션을
@@ -110,7 +110,7 @@ var app7 = new Vue({
 </div>
 ```
 
-#### 커스텀 요소 간 관계
+## 커스텀 요소 간 관계
 
 당신은 아마도 Vue 컴포넌트들이 [Web Components Spec](https://www.w3.org/wiki/WebComponents/) 의 한 부분인 **Custom Elements** 와 매우 유사하다는 것을 알게 되었을지 모른다.
 그 이유는 Vue 의 컴포넌트 문법이 spec 이후로 느슨하게 모델링되었기 때문이다.
@@ -130,7 +130,7 @@ var app7 = new Vue({
 비록 Vue 는 내부적으로 사용자 정의 요소를 사용하지 않지만, 그것이 사용자 정의 요소로써 사용되거나 배포될 때 훌륭한 상호운용성을 갖는다.
 Vue CLI 는 또한 자신 스스로 native custom elements 로 등록되는 Vue 컴포넌트를 building 하는 것을 지원한다.
 
-#### 무엇을 더 해야 할까?
+## 무엇을 더 해야 할까?
 
 지금까지 가장 기본적인 Vue.js 코어의 기능을 간략하게 소개했다.
 이후 나머지 가이드는 이것을 더 섬세한 디테일로 보충하거나 발전시키는 기능이다.
