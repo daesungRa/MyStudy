@@ -137,3 +137,5 @@ vm.$watch('a', function (newValue, oldValue) {
 나중에 인스턴스 속성과 메서드의 전체 목록을 [API reference](https://vuejs.org/v2/api/#Instance-Properties) 에서 찾아볼 수 있을 것이다.
 
 ## 인스턴스 수명주기
+
+

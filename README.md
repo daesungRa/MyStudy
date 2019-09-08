@@ -110,6 +110,7 @@
 ## VanillaJS
 
 - [[번역] Introduction to Vanilla JS](VanillaJS/intro-to-vanillajs.md) (190824, sat)
+- [[번역] Basic syntax of arrow functions](VanillaJS/basic_syntax_of_arrow_functions.md) (190908, sun)
 
 ## VueJS
 
