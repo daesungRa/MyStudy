@@ -39,6 +39,7 @@
     2. Ubuntu
 7. CS (Computer Science)
     1. [Algorithm](#Algorithm)
+    2. [Design](#Design)
 8. etc
     1. [기타 정보](#기타-정보)
     2. [스터디](#GroupStudy)
@@ -213,6 +214,10 @@
 - [사칙연산 응용 예제 - 설탕 배달](./Algorithm/SugarDeliver.md) (181231, mon)
 - [규칙 찾기 - 벌집](./Algorithm/BeeHouse.md) (190101, tue)
 - [규칙 찾기 - 분수 찾기](./Algorithm/FindFraction.md) (190103, thur)
+
+## Design
+
+- [MVC, MVP, MVVM](./cs_design/mvc_mvp_mvvm.md) (190908, sun)
 
 ## 게시판 만들기 연습!!
 
