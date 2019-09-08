@@ -145,5 +145,30 @@ vm.$watch('a', function (newValue, oldValue) {
 예를 들어 **created** hook 는 인스턴스가 생성된 이후에 코드를 실행하도록 사용될 수 있다.
 
 ```javascript
-
+new Vue({
+    data: {
+        a: 1
+    },
+    created: function () {
+        // 'this' points to the vm instance
+        console.log('a is: ' + this.a)
+    }
+})
+// => "a is: 1"
 ```
+
+또한 **mounted**, **updated**, 그리고 **destroyed** 와 같이 인스턴스 라이프사이클의 다른 stages 에서 호출될 또다른 hooks 가 존재한다.
+모든 lifecycle hooks 는 Vue 인스턴스가 자신을 invoke 한 지점을 가리키는 **this** 컨텍스트에서 호출된다.
+
+유의할 점
+> **created: () => console.log(this.a)** 나 **vm.$watch('a', newValue => this.myMethod())** 와 같이 옵션 프로퍼티나 콜백 부분에서
+> [arrow functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 를 사용하지 말 것.
+
+## 라이프사이클 다이어그램
+
+아래는 인스턴스 생명주기에 대한 다이어그램이다.
+지금 당장은 모든 것을 완전히 이해할 필요는 없지만, 앞으로 더 배워나가고 빌드해봄에 따라 유용한 참고자료가 될 것이다.
+
+![a diagram for the instance lifecycle](https://vuejs.org/images/lifecycle.png)
+
+예를 들어 단일 파일 컴포넌트와 같이 빌드 단계를 사용한다면 템플릿 컴파일이 사전에 수행됩니다.
