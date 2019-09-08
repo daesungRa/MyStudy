@@ -42,4 +42,41 @@ MVVM 은 마크업 언어나 GUI 코드를 통해 [그래픽 사용자 인터페
 
 참조: [마기의 개발 블로그](https://magi82.github.io/android-mvc-mvp-mvvm/)
 
+이러한 프레임워크 패턴들의 공통적인 특징이자 장점은 다음과 같다.
 
+> 처리결과를 화면에 보여주는 로직과 실제 데이터가 저리되는 로직을 분리한다.
+
+즉 이러한 디자인 패턴은 사용자 뷰 인터페이스와 데이터 처리 모델 로직을 분리하여 규모가 큰 프로젝트에서도 코드가 혼용되지 않도록 하기 위해 고안되었다.
+
+#### MVC
+
+MVC 의 단점은 모델과 뷰 로직이 상호간에 의존적이라는 것에 있다.
+컨트롤러에 의해 특정 모델에 따라 데이터가 처리되면 사전에 정의된 뷰를 반환해줘야만 하는것이다.
+
+![MVC diagram](https://magi82.github.io/images/2017-2-24-android-mvc-mvp-mvvm/mvc.png)
+
+#### MVP
+
+이러한 문제를 보완하기 위해 고안되었는데, 원리는 MVC 와 기본적으로 동일하지만,
+사용자 입력을 컨트롤러가 아닌 View 에서 직접적으로 수용하고 Presenter 와 상호작용 한다는 데 차이점이 있다.
+View 입장에서는 오로지 Presenter 와만 통신하므로 Model 에 대해 전혀 알 필요가 없다.
+결과적으로 Model, View 간의 의존성이 사라진다.
+
+![MVP diagram](https://magi82.github.io/images/2017-2-24-android-mvc-mvp-mvvm/mvp.png)
+
+그러나 MVP 에서도 View 와 Presenter 간의 강한 1:1 의존관계가 있다는 단점이 존재한다.
+
+#### MVVM
+
+MVVM 은 Presenter 대신 ViewModel 을 사용한다.
+ViewModel 은 **View 를 표현하기 위해 만들어진 View 만을 위한 Model** 이다.
+여기서는, View 로 전달된 입력에 의해 **Command 패턴**에 따라 ViewModel 에 명령을 내리고,
+데이터가 변화하면 그것에 따라 **Data Binding** 된다.
+
+View 와 ViewModel 간의 의존성은 사라지고, ViewModel 의 Model 과의 상호작용에 의해 변경 후 저장된 데이터에 따라
+자동으로 View 형태가 변화하게 된다.
+
+## 첨언
+
+특히, Vue 와 같은 프론트엔드 프레임워크는 View 인터페이스를 위해 만들어진 만큼, MVVM 디자인 패턴의 아이디어를
+상당 부분 차용하고 있다. 데이터 변화에 따라 별다른 의존성 없이 자동적으로 화면이 변화한다!
