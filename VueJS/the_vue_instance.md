@@ -2,7 +2,7 @@
 ![author](https://img.shields.io/badge/author-daesungRa-lightgray.svg?style=flat-square)
 ![date](https://img.shields.io/badge/date-190905-lightgray.svg?style=flat-square)
 
-# The Vue Instance
+# 뷰 인스턴스
 
 참조: [The Vue Instance](https://vuejs.org/v2/guide/instance.html)
 
@@ -171,4 +171,4 @@ new Vue({
 
 ![a diagram for the instance lifecycle](https://vuejs.org/images/lifecycle.png)
 
-예를 들어 단일 파일 컴포넌트와 같이 빌드 단계를 사용한다면 템플릿 컴파일이 사전에 수행됩니다.
+예를 들어 단일 파일 컴포넌트와 같이 빌드 단계를 사용한다면 템플릿 컴파일이 사전에 수행된다.
