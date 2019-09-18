@@ -33,4 +33,38 @@ The mustache 태그는 data 객체를 만났을 때 ```msg``` 속성의 값으�
 
 \# Raw HTML
 
+이중 mustaches 는 데이터를 HTML 이 아닌 일반적인 텍스트로 해석한다.
+진짜 HTML 을 반환하기 위하여, ```v-html``` 디렉티브를 사용해야 한다.
 
+```html
+<p>Using mustaches: {{ rawHtml }}</p>
+<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+```
+
+```span``` 의 내용 부분은 ```rawHtml```의 속성값으로 대체되며, 일반 HTML 로 해석될 것이다.
+이때 바인딩된 데이터는 무시된다. Vue 는 문자열 기반 템플릿 엔진이 아니기 때문에,
+템플릿들을 부분적으로 조립하기 위하여 ```v-html``` 을 사용할 수 없다는 점을 기억하라.
+대신 UI 재사용 및 구성의 기본 단위로 컴포넌트가 사용된다.
+
+```text
+(주의) [XSS 취약점](https://en.wikipedia.org/wiki/Cross-site_scripting)을 야기시킬 수 있기 때문에
+당신의 웹사이트에 임의의 HTML 을 동적으로 렌더링하는 것은 매우 위험할 수 있다.
+```
+
+\# Attributes
+
+Mustaches 은 HTML 속성으로 사용될 수 없다. 대신 [```v-bind``` 디렉티브](https://vuejs.org/v2/api/#v-bind)를 사용한다.
+
+```html
+<div v-bind:id="dynamicId"></div>
+```
+
+boolean 속성에 대해서는, 그것의 존재가 단지 ```true```를 의미한다면, ```v-bind``` 는 약간 다르게 동작한다.
+다음의 예제를 보자:
+
+```html
+<button v-bind:disabled="isButtonDisabled">Button</button>
+```
+
+만약 ```ifButtonDisabled``` 가 ```null```, ```undefined```, 또는 ```false``` 값을 가지고 있다면,
+```disabled``` 속성은 렌더된 ```<button>``` 엘리먼트에 포함되지 않을 것이다.
