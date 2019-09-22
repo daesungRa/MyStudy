@@ -6,17 +6,17 @@
 
 - ref: [[article]The history of agile](https://techbeacon.com/app-dev-testing/agility-beyond-history-legacy-agile-development)
 
-소프트웨어에서 ["Continuous delivery"(지속적 공급)](https://en.wikipedia.org/wiki/Continuous_delivery) 는 more than a buzz phrase.
-그렇다. 소프트웨어 continuous delivery 는 개발 방법론, 고객 유지에서 신성한 위치를 차지하며,
+소프트웨어에서 ["Continuous delivery"(지속적 공급)](https://en.wikipedia.org/wiki/Continuous_delivery) 는 특별한 의미 그 이상이다. (more than a buzz phrase.)
+그렇다. 소프트웨어의 지속적인 공급은 개발 방법론, 고객 유지에서 신성한 위치를 차지하며(holy grail),
 이것이야말로 DevOps 가 오늘날 그렇게도 뜨거운 개념이 된 이유이다.
-continuous delivery 의 중요성을 이해하기 위해서 agility 에 대한 역사와 애자일이 비롯된 지점에 대해 알 필요가 있다.
+지속적 공급의 중요성을 이해하기 위해서 agility 에 대한 역사와 애자일이 비롯된 지점에 대해 알 필요가 있다.
 
 애자일 소프트웨어 개발의 역사는 [Agile Manifesto(애자일 선언서)](http://techbeacon.com/50-shades-agile-software-development-manifesto) 로부터
 시작된 것이 아니다. 그것의 뿌리는 보다 더 이전으로 돌아가야 알 수 있다.
 이 기사는 애자일의 근원과 어떻게 더 많은 최신의 지식들이 우리를 매우 빠른 속도로 deliver cycles 로 이끌고 있는지를 포함하는
 30년 이상의 소프트웨어 개발 방법론의 진화에 대해 살펴볼 것이다.
 
-- 바로 지금이 당신의 릴리즈 관리 전략을 다시 생각해볼 때가 아닌가? [왜 적응적 릴리즈 방식이 DevOps 성공의 본질일까? (Gartner)](https://www.microfocus.com/en-us/assets/application-delivery-management/use-adaptive-release-governance-to-remove-constraints-to-devops?utm_source=techbeacon&utm_medium=techbeacon&utm_campaign=00134846)
+- 바로 지금이 당신의 릴리즈 관리 전략을 다시 생각해볼 때가 아닌가? [[왜 적응적 릴리즈 방식이 DevOps 성공의 본질일까? (Gartner)]](https://www.microfocus.com/en-us/assets/application-delivery-management/use-adaptive-release-governance-to-remove-constraints-to-devops?utm_source=techbeacon&utm_medium=techbeacon&utm_campaign=00134846)
 
 ## First came the crisis
 
@@ -38,9 +38,9 @@ PC computing 이 기업 규모로 증식하기 시작하던 1990 년대 초반, 
 
 ## Thought leaders were frustrated
 
-1990년대 항공우주 엔지니어인 Jon Kern 는 이러한 긴 진행기간과 향후 바꿀 수 없는 프로젝트 초기에 결정된 사항들에 점점 실망하고 있었다.
-소프트웨어를 만드는 더 좋은 방법이 있어야겠다고 느끼는 사람들이 증가하는 가운데 그는 다음과 같이 기록했다.
-"우리는 더 시의적절하고 유연한 무언가를 찾고 있었다."
+1990년대 항공우주 엔지니어인 Jon Kern 는 이러한 긴 진행기간과 향후 바꿀 수 없는 프로젝트 초기에 결정된 사항들에 점점 좌절하고 있었다.
+소프트웨어를 만드는 더 좋은 방법이 있어야겠다고 느끼는 사람들이 증가하는 흐름 속에서 그는 다음과 같이 기록했다.
+**"우리는 더 시의적절하고 유연한 무언가를 찾고 있었다."**
 그는 비공식적으로 모임을 시작하여 절차와 과도한 문서와 당시의 다른 유명한 소프트웨어 엔지니어링 기술 없이
 소프트웨어 개발을 보다 단순화하는 방법에 대해 토론하는 17개 소프트웨어 그룹(thought) 리더 중의 하나였다.
 
@@ -54,4 +54,9 @@ AT&T 가 해체되었고, 소위 Baby Bells 는 과감하게 휴대전화와 서
 
 ## And agile was born
 
-겉보기에 비생산적인 소프트웨어 개발 활동을 둘러싼 이러한 좌절은 
+비슷한 생각을 가진 전문가들에 의해 공유된 겉보기에 비생산적인 소프트웨어 개발 활동을 둘러싼 이러한 좌절은
+2001년 초반 유타(Utah)에서부터 현재 유명한 Snowbird meeting 으로 이어졌다.
+그러나 이 특정한 그룹의 소프트웨어 리더들의 만남은 처음이 아니었다.
+그들은 일년 전인 2000년 봄 오리곤의 Rogue River Lodge 에서 모였다.
+
+이 그룹은 
