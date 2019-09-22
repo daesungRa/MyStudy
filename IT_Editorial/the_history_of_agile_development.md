@@ -4,6 +4,8 @@
 
 # To agility and beyond: The history-and legacy-of agile development
 
+- ref: [[article]The history of agile](https://techbeacon.com/app-dev-testing/agility-beyond-history-legacy-agile-development)
+
 소프트웨어에서 ["Continuous delivery"(지속적 공급)](https://en.wikipedia.org/wiki/Continuous_delivery) 는 more than a buzz phrase.
 그렇다. 소프트웨어 continuous delivery 는 개발 방법론, 고객 유지에서 신성한 위치를 차지하며,
 이것이야말로 DevOps 가 오늘날 그렇게도 뜨거운 개념이 된 이유이다.
