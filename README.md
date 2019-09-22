@@ -42,8 +42,9 @@
     2. [Design](#Design)
 8. etc
     1. [기타 정보](#기타-정보)
-    2. [스터디](#GroupStudy)
-    3. [회화](#Conversation)
+    2. [IT Editorial](#IT-Editorial)
+    3. [스터디](#GroupStudy)
+    4. [회화](#Conversation)
 
 # 카테고리
 
@@ -251,4 +252,6 @@
 - [파이썬의 자바보다 좋은 점(feat. 그냥 차이점)](./etc/pythonBetterThanJava.md) (최종수정일 : 190521, tue)
 - [[Win7_pro_k] 스카이레이크 기반 메인보드에 업무용 정품 win 7 pro k 설치 후 환경설정하기](./etc/win7prok.md) (최종수정일 : 190604, tue)
 
+## IT Editorial
 
+- [The history-and legacy-of agile development](./IT_Editorial/the_history_of_agile_development.md) (190922, sun)
