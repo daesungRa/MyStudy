@@ -2,7 +2,7 @@
 ![author](https://img.shields.io/badge/author-daesungRa-lightgray.svg?style=flat-square)
 ![date](https://img.shields.io/badge/date-190922-lightgray.svg?style=flat-square)
 
-# To agility and beyond: The history-and legacy-of agile development
+# 애자일과 그것을 넘어서 (To agility and beyond: The history-and legacy-of agile development)
 
 - ref: [[article]The history of agile](https://techbeacon.com/app-dev-testing/agility-beyond-history-legacy-agile-development)
 
@@ -18,13 +18,13 @@
 
 - 바로 지금이 당신의 릴리즈 관리 전략을 다시 생각해볼 때가 아닌가? [[왜 적응적 릴리즈 방식이 DevOps 성공의 본질일까? (Gartner)]](https://www.microfocus.com/en-us/assets/application-delivery-management/use-adaptive-release-governance-to-remove-constraints-to-devops?utm_source=techbeacon&utm_medium=techbeacon&utm_campaign=00134846)
 
-## First came the crisis
+## 처음에는 위기가 찾아왔다 (First came the crisis)
 
 PC computing 이 기업 규모로 증식하기 시작하던 1990 년대 초반, 소프트웨어 개발론은 위기를 맞았다.
 그때 이것은 "the application development crisis," 또는 "application delivery lag.(소프트웨어 공급 지연)" 와 같이 널리 언급되었다.
 산업 전문가들은 비즈니스 요구사항 검증과 실제 제품으로써의 어플리케이션 출시 간에 약 3년의 시간적 편차가 존재한다고 평가했다.
 
-문제는 비즈니스는 심지어 25년 이전부터 그것보다 더 빠르게 움직이고 있었다는 것이었다.
+문제는 25년 이전보다 기업들이 더 빠르게 움직이고 있었다는 것이었다.
 (출시되기까지) 3년의 공백 안에 요구사항, 시스템, 심지어 전체 비즈니스는 바뀔 가능성이 있었다.
 이는 많은 프로젝트의 결과물이 (개발) 도중에 취소되며, 심지어 완성된 결과물 중의 대다수가 프로젝트의 본래 목적과 일치함에도 불구하고
 비즈니스의 최신 요구사항에는 부합하지 못했다는 것을 의미했다.
@@ -36,7 +36,7 @@ PC computing 이 기업 규모로 증식하기 시작하던 1990 년대 초반, 
 
 - Get report: [상위 20개의 지속적인 어플리케이션 퍼포먼스 관리 기업들](https://www.microfocus.com/en-us/assets/it-operations-management/research-in-action-continuous-application-performance-management-saas-and-software?utm_source=techbeacon&utm_medium=techbeacon&utm_campaign=00134846)
 
-## Thought leaders were frustrated
+## 리더들의 좌절 (Thought leaders were frustrated)
 
 1990년대 항공우주 엔지니어인 Jon Kern 는 이러한 긴 진행기간과 향후 바꿀 수 없는 프로젝트 초기에 결정된 사항들에 점점 좌절하고 있었다.
 소프트웨어를 만드는 더 좋은 방법이 있어야겠다고 느끼는 사람들이 증가하는 흐름 속에서 그는 다음과 같이 기록했다.
@@ -52,11 +52,58 @@ AT&T 가 해체되었고, 소위 Baby Bells 는 과감하게 휴대전화와 서
 그 이유는 하드웨어 디자인이 결정되기 전까지는 소프트웨어 개발을 시작할 수 없었기 때문이다.
 당시 소프트웨어를 만드는 것은 대부분의 제품 개발 팀에게 우선순위가 아니었다.
 
-## And agile was born
+## 그리고 애자일이 탄생했다 (And agile was born)
 
 비슷한 생각을 가진 전문가들에 의해 공유된 겉보기에 비생산적인 소프트웨어 개발 활동을 둘러싼 이러한 좌절은
 2001년 초반 유타(Utah)에서부터 현재 유명한 Snowbird meeting 으로 이어졌다.
 그러나 이 특정한 그룹의 소프트웨어 리더들의 만남은 처음이 아니었다.
 그들은 일년 전인 2000년 봄 오리곤의 Rogue River Lodge 에서 모였다.
 
-이 그룹은 
+이 그룹은 Kern 을 비롯하여 프로그래밍의 선구자 Kent Beck, Ward Cunningham, Arie van Bennekum, Alistair Cockburn,
+그리고 열 두명의 또다른 사람들을 포함하고 있는데, 이들은 애자일 코뮤니티에서 잘 알려진 사람들이다.
+초창기 애자일(Agile, as a practice)은 최종 목적지가 아니었다.
+사실 "agile" 은 그때 이전에는 아직 공식적인 용어로 사용되지 않았었는데,
+그 모임에서는, 참석자 모두가 특별히 만족하지는 못했지만, "가벼운(light)" 그리고 "경량(lightweight)" 과 같은 표현이 더 일반적이었다.
+
+특히, 이 리더들은 동작하는 소프트웨어를 빠르게 빌드하고 그것을 최종사용자에게 전달하는 방법들에 대해서 탐색했다.
+이 빠른 공급방식은 다수의 중요한 유익들을 제공했는데, 첫째로 이것은 사용자들로 하여금 새로운 소프트웨어의 비즈니스적 이점을
+빠르게 얻을 수 있도록 하였다. 둘째로 이것은 소프트웨어 팀이 소프트웨어의 범주와 방향성에 대한 빠른 피드백을 얻을 수 있도록 하였다.
+
+빠른 피드백과 변화에 대한 열린 자세는 애자일 운동의 주요한 특징이 되었다.
+소프트웨어 팀이 사용자의 니즈 이해에 대한 확신이 없을 때 이것은 우선 대략적인 결과물(first approximation)을 전달한 뒤 피드백을 받는다.
+그러나 이 경우, 프로젝트의 시작점에서는 매우 적은 내용만 픽스된다.
+
+## 무거운 공정에 대한 반발 (A backlash against heavyweight processes)
+
+애자일은 소프트웨어의 초창기에 종종 활용되어지곤 하던 혼돈스럽고 계획되지 않은 산물들에 대한 응답으로써
+1970년대와 1980년대에 만들어진 개발 방법론에 대한 비판을 의미하지는 않는다.
+사실 1970년대에서 1990년대까지는 크게 봐서 기초적인 이론들과 소프트웨어 엔지니어링 관례들이 나타나게 된 시기이다.
+(애자일)의 개념은 소프트웨어 엔지니어링을 물리적 엔지니어링과 동일시하고
+그것의 설계와 실제 건축물로부터 가능한 한 많은 것을 차용하는 것이었다.
+
+이 성과는 폭포수 방법론으로 알려지면서 스스로를 드러냈으며,
+배포 요구사항으로부터 시작하는 개발 생명주기의 주요한 위상들을 명백하게 정의했다.
+이것은 "폭포수(waterfall)" 라고 이름 지어졌는데,
+그 이유는 개발 팀이 다음 단계로 넘어가기 전에 완전한 하나의 스텝(폭포수의 한 스텝)을 완료하기 때문이다.
+각 단계에 걸쳐서 기능적 설계로 넘어가기 전에 요구사항이 완성되어야 하고, 기능적 설계는 상세 설계 이전에 완료되어야 하는 식이다.
+그리고 물이 경사를 거슬러 올라가지 않듯이, 프로세스의 이전 단계로 되돌아가는 내용은 거의 없다.
+한번 특정 단계를 끝마치면 해당 단계는 그 시점에 동결된다.
+
+이 방법론은 (물리적 공학으로부터) 소프트웨어 개발의 조직과 엔지니어링 관행의 컨셉을 가져왔으나 (그것과) 주요한 차이점이 있었다.
+토목 공학 또는 기계 공학 프로젝트는 십년 혹은 그 이상의 기간동안 좀처럼 변하지 않는다.
+만약 오늘날 당신이 교량(다리)이나 고층 건물 설계를 한다면, 일이년 동안은 상세 내용들이 변경되지 않을 가능성이 매우 높다.
+
+사실 본원으로써의 폭포수는 변화와 프로젝트의 결정사항 재검토를 수용하는 것으로 되어 있었다.
+그곳에는 이전 단계로 되돌아가는 것을 수용하는 것과 몇몇 결정사항과 기대점들을 조정하는 것,
+현재 단계의 관점을 변경할 수 있는 변화들도 존재했다.
+그러나 관례적으로 일정과 예산들은 거의 항상 그것이 불가능하도록 했고, 팀으로 하여금 이전의 결정을 고수하도록 강제하였다.
+
+당시에는 계획 세우는 것에 더 많은 시간을 사용하면 코드 작성에 더 적은 시간이 소요되며 코드가 더 좋아진다는 것이
+대부분의 소프트웨어 개발 그룹들과 대학의 컴퓨터공학 부서들에게 복음으로 받아들여졌다.
+이것은 단지 프로세스 중심의 접근 방식만 강화하여, 작동하는 소프트웨어를 제공하는 것보다 계획을 세우고 문서화하는 것만을 강조했다.
+
+## 동의하지 않기를 간청한다 (We beg to disagree)
+
+소프트웨어 프로젝트들은 전통적인 엔지니어링 프로젝트들과 같은 종류의 안정성을 거의 갖지 못한다.
+비즈니스 요구사항은 소프트웨어 어플리케이션 완료에 공식적으로 요구되는 개월수나 연수보다 더 빠르게 변화한다.
+돌아보자면, 엔지니어링에 있어서 소프트웨어는 완전히 다른 접근방법이 요구되는 것으로 보인다.
