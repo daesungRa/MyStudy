@@ -4,7 +4,7 @@
 
 # 애자일과 그것을 넘어서 (To agility and beyond: The history-and legacy-of agile development)
 
-- ref: [[article]The history of agile](https://techbeacon.com/app-dev-testing/agility-beyond-history-legacy-agile-development)
+> 출처: <a href="https://techbeacon.com/app-dev-testing/agility-beyond-history-legacy-agile-development" target="_blank">[article]The history of agile</a>
 
 소프트웨어에서 ["Continuous delivery"(지속적 공급)](https://en.wikipedia.org/wiki/Continuous_delivery) 는 특별한 의미 그 이상이다. (more than a buzz phrase.)
 그렇다. 소프트웨어의 지속적인 공급은 소프트웨어 개발 관례, 고객 유지의 측면에서 성배이며(holy grail),
