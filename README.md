@@ -217,7 +217,7 @@
 - [사칙연산 응용 예제 - 설탕 배달](./Algorithm/SugarDeliver.md) (181231, mon)
 - [규칙 찾기 - 벌집](./Algorithm/BeeHouse.md) (190101, tue)
 - [규칙 찾기 - 분수 찾기](./Algorithm/FindFraction.md) (190103, thur)
-- [[번역]Introduction to Algorithms](./Algorithm/IntroductionToAlgorithms.md) (191009, wed)
+- [[번역] Introduction to Algorithms](./Algorithm/IntroductionToAlgorithms.md) (191009, wed)
 
 ## Design
 
