@@ -4,20 +4,58 @@
 
 # Introduction to Algorithms (Third Edition, 2009)
 
-Reference:  [[번역]Introduction to Algorithms-CLRS](https://github.com/CodeClub-JU/Introduction-to-Algorithms-CLRS/blob/master/Introduction%20to%20Algorithms%20-%203rd%20Edition.pdf)
+Reference:  [[번역] Introduction to Algorithms-CLRS](https://github.com/CodeClub-JU/Introduction-to-Algorithms-CLRS/blob/master/Introduction%20to%20Algorithms%20-%203rd%20Edition.pdf)
 
 #### Contents
 
+```
 1. 기초
-    - 소개    3
-    1. 컴퓨팅에서 알고리즘의 역할    5
+    - 소개 (3)
+    1. 컴퓨팅에서 알고리즘의 역할 (5)
     
-        - 알고리즘    5
-        - 기술로써의 알고리즘    11
+        - 알고리즘 (5)
+        - 기술로써의 알고리즘 (11)
         
-    2. 시작하기    16
+    2. 시작하기 (16)
     
-        - 삽입 정렬    16
+        - 삽입 정렬 (16)
+        - 알고리즘 분석 (23)
+        - 알고리즘 설계 (29)
+    
+    3. 함수 확장 (43)
+    
+        - 점근 표기법 (43)
+        - 표준 기법과 일반적인 함수들 (53)
+    
+    4. 분할 정복(Divide-and-Conquer) (65)
+    5. 확률 분석과 무작위 알고리즘 (114)
+    
+2. 정렬 및 순서 통계
+
+    - 소개 (147)
+    6. 힙정렬 (151)
+    7. 퀵정렬 (170)
+    8. 선형 시계열에서 정렬 (191)
+    9. 중앙값 및 순서 통계 (213)
+    
+3. 데이터 구조
+
+    소개 (229)
+    10. 기본 데이터 구조 (232)
+    11. 해시 테이블 (253)
+    12. 이진 검색 트리 (286)
+    13. 레드블랙 트리 (308)
+    14. 확장 데이터 구조 (339)
+    
+4. 진보된 설계 및 분석 기술
+    
+    - 소개 (357)
+    
+5. 진보된 데이터 구조
+6. 그래프 알고리즘
+7. 선택된 주제들
+8. 부록: 수학적 제반도구
+```
 
 ## 1    기초
 
@@ -74,7 +112,7 @@ or even to bound the error rate of algorithms that are allowed to produce incorr
 그러나 다른 한 편에서 당신은 파트 1 의 대부분의 도구를 아직 보지 못했을지 모른다.
 파트 1 의 모든 챕터와 부록은 맛보기 튜토리얼로써 쓰여졌다.
 
-### 1    컴퓨팅에서 알고리즘의 역할
+### 1 컴퓨팅에서 알고리즘의 역할
 
 > 알고리즘이란 무엇인가? 왜 알고리즘을 공부하는 것이 가치 있는 일인가?
 컴퓨터를 사용하는 다른 기술들과 관련해서 알고리즘의 역할은 무엇인가? 이 챕터에서는 이러한 질문들에 대답한다.
