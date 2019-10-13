@@ -4,6 +4,8 @@
 
 # Introduction to Algorithms (Third Edition, 2009)
 
+Reference:  [[번역]Introduction to Algorithms-CLRS](https://github.com/CodeClub-JU/Introduction-to-Algorithms-CLRS/blob/master/Introduction%20to%20Algorithms%20-%203rd%20Edition.pdf)
+
 #### Contents
 
 1. 기초
