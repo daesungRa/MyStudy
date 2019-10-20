@@ -8,7 +8,6 @@ Reference:  [[번역] Introduction to Algorithms-CLRS](https://github.com/CodeCl
 
 #### Contents
 
-```
 1. 기초
     - 소개 (3)
     1. 컴퓨팅에서 알고리즘의 역할 (5)
@@ -55,7 +54,6 @@ Reference:  [[번역] Introduction to Algorithms-CLRS](https://github.com/CodeCl
 6. 그래프 알고리즘
 7. 선택된 주제들
 8. 부록: 수학적 제반도구
-```
 
 ## 1    기초
 
